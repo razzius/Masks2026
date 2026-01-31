@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://fjwmfp7itbfr"]
 
 [ext_resource type="Script" uid="uid://cscr4vo7drgmp" path="res://scripts/Lever.gd" id="1_b1op8"]
+[ext_resource type="Texture2D" uid="uid://bbni44l4eb2ry" path="res://art/lever_0000.png" id="2_pix2u"]
 
-[node name="Lever" type="Control" unique_id=1244941833]
+[node name="Lever" type="Control" unique_id=1982987846]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 2
+anchor_top = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = -150.0
+grow_vertical = 0
 script = ExtResource("1_b1op8")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=626773051]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=795643841]
+rotation = 1.5707964
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_pix2u")
