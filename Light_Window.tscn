@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://xl5kmp0ry8ft"]
+
+[ext_resource type="Texture2D" uid="uid://c0yst0ko6krfb" path="res://art/door_0000.png" id="1_0vixw"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_e3072"]
+polygon = PackedVector2Array(1, 3, -323, -1.9999695, -328, 39.000027, 4.000004, 42.000004)
+
+[sub_resource type="Gradient" id="Gradient_m5ka6"]
+offsets = PackedFloat32Array(0.85542166, 0.97590363)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_076hp"]
+gradient = SubResource("Gradient_m5ka6")
+width = 2048
+height = 4096
+fill_from = Vector2(0.5173913, 0)
+fill_to = Vector2(0.5304348, 1)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vmerv"]
+polygon = PackedVector2Array(-345, 106, -327, -361, -711, -366, -724, 150, -703, 147, -690, -353, -353, -340, -366, 147, -337, 147)
+
+[node name="Node2D" type="Node2D" unique_id=219569577]
+
+[node name="Door0000" type="Sprite2D" parent="." unique_id=1347745500]
+position = Vector2(214, -269)
+rotation = 3.1415927
+texture = ExtResource("1_0vixw")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Door0000" unique_id=526431295]
+position = Vector2(157.99998, -233.00002)
+occluder = SubResource("OccluderPolygon2D_e3072")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=977391977]
+position = Vector2(610, -471)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_076hp")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1258382368]
+position = Vector2(1131, -163)
+occluder = SubResource("OccluderPolygon2D_vmerv")
