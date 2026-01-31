@@ -1,6 +1,8 @@
 extends Node
 class_name Gate
 
+signal hit(test: String)
+
 @export var opened : bool
 var sprite : Sprite2D
 var collider
@@ -37,3 +39,4 @@ func ToggleDoor() -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print('area entered!')
+	hit.emit('blah')
