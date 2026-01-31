@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://fjwmfp7itbfr"]
+
+[ext_resource type="Script" uid="uid://cscr4vo7drgmp" path="res://scripts/Lever.gd" id="1_b1op8"]
+
+[node name="Lever" type="Control" unique_id=1244941833]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b1op8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=626773051]
