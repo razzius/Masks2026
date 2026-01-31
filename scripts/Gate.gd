@@ -8,7 +8,7 @@ var collider
 
 func _ready() -> void:
 	sprite = get_child(0)
-	collider = $Area2D/CollisionShape2D
+	collider = $StaticBody2D/CollisionShape2D
 	
 	if(opened):
 		OpenDoor()

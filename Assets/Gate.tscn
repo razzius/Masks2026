@@ -11,10 +11,8 @@ script = ExtResource("1_x6m3a")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=540055640]
 texture = ExtResource("2_x6m3a")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1714106858]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=44474892]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=922041905]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=922041905]
 scale = Vector2(18, 26)
 shape = SubResource("RectangleShape2D_x6m3a")
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
