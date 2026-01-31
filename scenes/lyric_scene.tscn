@@ -26,6 +26,24 @@
 [ext_resource type="Texture2D" uid="uid://cia6xxho2g8uk" path="res://art/leverpull_0002.png" id="24_yecrt"]
 [ext_resource type="Texture2D" uid="uid://d287kbal16s18" path="res://art/leverpull_0003.png" id="25_1sg8o"]
 [ext_resource type="Texture2D" uid="uid://cmdkux4lytgqt" path="res://art/leverpull_0004.png" id="26_uljna"]
+[ext_resource type="Texture2D" uid="uid://b8c84pt36id" path="res://art/maskcharacterthinking_0000.png" id="27_jhdna"]
+[ext_resource type="Texture2D" uid="uid://bawdcf42wduyy" path="res://art/maskcharacterthinking_0001.png" id="28_7xut0"]
+[ext_resource type="Texture2D" uid="uid://ekvelo0bgt4b" path="res://art/maskcharacterthinking_0002.png" id="29_ipswj"]
+[ext_resource type="Texture2D" uid="uid://734um3ekn0hh" path="res://art/maskcharacterthinking_0003.png" id="30_2hktu"]
+[ext_resource type="Texture2D" uid="uid://bmr00b7j71art" path="res://art/maskcharacterthinking_0004.png" id="31_k8erb"]
+[ext_resource type="Texture2D" uid="uid://dx2troo73tqb1" path="res://art/maskcharacterthinking_0005.png" id="32_o4f33"]
+[ext_resource type="Texture2D" uid="uid://sxdopeb64ryj" path="res://art/maskcharacterthinking_0006.png" id="33_luw6l"]
+[ext_resource type="Texture2D" uid="uid://myagi43nmlxw" path="res://art/maskcharacterthinking_0007.png" id="34_ln4by"]
+[ext_resource type="Texture2D" uid="uid://s1k43f3pk0un" path="res://art/maskcharacterthinking_0008.png" id="35_wtn31"]
+[ext_resource type="Texture2D" uid="uid://dcsfnkcjhw813" path="res://art/maskcharacterworried_0000.png" id="36_e6hfk"]
+[ext_resource type="Texture2D" uid="uid://cwgbjjyicjq2w" path="res://art/maskcharacterworried_0001.png" id="37_um1bp"]
+[ext_resource type="Texture2D" uid="uid://cnqfv5odjnc6q" path="res://art/maskcharacterworried_0002.png" id="38_jbkqy"]
+[ext_resource type="Texture2D" uid="uid://y3156c52xy4d" path="res://art/maskcharacterworried_0003.png" id="39_84otb"]
+[ext_resource type="Texture2D" uid="uid://do8hpwsl6eok0" path="res://art/maskcharacterworried_0004.png" id="40_htyoh"]
+[ext_resource type="Texture2D" uid="uid://dl0fig5dwjoyk" path="res://art/maskcharacterworried_0005.png" id="41_36xeh"]
+[ext_resource type="Texture2D" uid="uid://0a1rfs2bs5e2" path="res://art/maskcharacterworried_0006.png" id="42_yshc6"]
+[ext_resource type="Texture2D" uid="uid://8qxdxvjw7alq" path="res://art/maskcharacterworried_0007.png" id="43_spd7l"]
+[ext_resource type="Texture2D" uid="uid://ducd6vdcjhse5" path="res://art/maskcharacterworried_0008.png" id="44_1qa7r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06d2e"]
 animations = [{
@@ -121,6 +139,70 @@ animations = [{
 "loop": true,
 "name": &"leverpull",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_jhdna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_7xut0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ipswj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_2hktu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_k8erb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_o4f33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_luw6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ln4by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_wtn31")
+}],
+"loop": true,
+"name": &"maskcharacterthinking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_e6hfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_um1bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_jbkqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_84otb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_htyoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_36xeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_yshc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_spd7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_1qa7r")
+}],
+"loop": true,
+"name": &"maskcharacterworried",
+"speed": 5.0
 }]
 
 [node name="LyricScene" type="Node2D" unique_id=901075329]
@@ -128,5 +210,4 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1567105321]
 position = Vector2(-195, 3)
 sprite_frames = SubResource("SpriteFrames_06d2e")
-animation = &"leverpull"
-frame_progress = 0.11380354
+animation = &"door"

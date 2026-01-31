@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg57ykg6ax84l"
-path="res://.godot/imported/maskcharacterthinking_0008.png-a8b13b889559335e529bec054df7f3f0.ctex"
+uid="uid://c51v6va8twxm5"
+path="res://.godot/imported/crate.png-7a5c65fead6c082ef0f772445351e342.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/maskcharacterthinking_0008.png"
-dest_files=["res://.godot/imported/maskcharacterthinking_0008.png-a8b13b889559335e529bec054df7f3f0.ctex"]
+source_file="res://art/crate.png"
+dest_files=["res://.godot/imported/crate.png-7a5c65fead6c082ef0f772445351e342.ctex"]
 
 [params]
 
