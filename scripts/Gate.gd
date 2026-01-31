@@ -2,12 +2,12 @@ extends Node
 
 @export var opened : bool
 var sprite : Sprite2D
-var collider : Area2D
+var collider
 
 
 func _ready() -> void:
 	sprite = get_child(0)
-	collider = get_child(1)
+	collider = $Area2D/CollisionShape2D
 	
 	if(opened):
 		OpenDoor()
