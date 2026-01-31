@@ -1,4 +1,5 @@
 extends Node
+class_name Gate
 
 @export var opened : bool
 var sprite : Sprite2D
