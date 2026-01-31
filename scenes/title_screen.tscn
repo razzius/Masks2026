@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cyootegidemij"]
+
+[ext_resource type="Script" uid="uid://0ljlbghyicvi" path="res://scripts/title_screen.gd" id="1_fgkus"]
+
+[node name="TitleScreen" type="Node2D" unique_id=736705505]
+script = ExtResource("1_fgkus")
+
+[node name="Button" type="Button" parent="." unique_id=1344575416]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Start"
+
+[connection signal="pressed" from="Button" to="." method="_on_start_button_pressed"]
