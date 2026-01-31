@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://blrdngnd2jot6"]
+
+[ext_resource type="Script" uid="uid://dhrgt8k40l657" path="res://scripts/area_2d_bounce.gd" id="2_bwjsp"]
+[ext_resource type="Texture2D" uid="uid://bivr2khgssmkh" path="res://art/happymask.png" id="2_vtaw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaw1"]
+
+[node name="RazziTest" type="Node2D" unique_id=1359150612]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=581954685]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=881163624]
+script = ExtResource("2_bwjsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1437822850]
+position = Vector2(184, 159)
+texture = ExtResource("2_vtaw1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=225758367]
+shape = SubResource("RectangleShape2D_vtaw1")
