@@ -11,6 +11,7 @@ bounce = 1.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6m3a"]
 
 [node name="Gate" type="Node2D" unique_id=1733791318]
+scale = Vector2(2, 2)
 script = ExtResource("1_x6m3a")
 openTex = ExtResource("2_x6m3a")
 closeTex = ExtResource("2_gvlo7")

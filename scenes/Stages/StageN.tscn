@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cs3h3h17qel20"]
+
+[ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="2_swga8"]
+[ext_resource type="PackedScene" uid="uid://e625levok1c3" path="res://Assets/Gate.tscn" id="3_swga8"]
+[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://scenes/mask.tscn" id="3_t8h1r"]
+[ext_resource type="PackedScene" uid="uid://g22m82tlsmfs" path="res://Assets/LightGate.tscn" id="3_uyrid"]
+[ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="4_uyrid"]
+[ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="5_4whon"]
+[ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="6_kj7ij"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ixc1"]
+texture = ExtResource("2_swga8")
+texture_region_size = Vector2i(1000, 1000)
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_t8h1r"]
+resource_name = "Gate"
+scenes/1/scene = ExtResource("3_swga8")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4whon"]
+resource_name = "LightGate"
+scenes/2/scene = ExtResource("3_uyrid")
+
+[sub_resource type="TileSet" id="TileSet_f1ilw"]
+tile_size = Vector2i(1000, 1000)
+sources/0 = SubResource("TileSetAtlasSource_0ixc1")
+sources/2 = SubResource("TileSetScenesCollectionSource_t8h1r")
+sources/3 = SubResource("TileSetScenesCollectionSource_4whon")
+
+[node name="StageN" type="Node2D" unique_id=253650236]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2009943806]
+scale = Vector2(0.1, 0.1)
+tile_set = SubResource("TileSet_f1ilw")
+
+[node name="Mask" parent="." unique_id=1359150612 instance=ExtResource("3_t8h1r")]
+position = Vector2(648, 420)
+
+[node name="UI" parent="." unique_id=1760316433 instance=ExtResource("4_uyrid")]
+
+[node name="Lever" parent="UI" index="1" unique_id=901851183]
+position = Vector2(100, 930)
+
+[node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
+gates = [null]
+
+[node name="Lever2" parent="UI" index="2" unique_id=2042641525]
+position = Vector2(250, 930)
+
+[node name="Lever3" parent="UI" index="3" unique_id=888916594]
+position = Vector2(400, 930)
+
+[node name="Banner" type="Sprite2D" parent="." unique_id=501511650]
+position = Vector2(461, 113)
+texture = ExtResource("5_4whon")
+
+[node name="Banner" type="Sprite2D" parent="Banner" unique_id=1633536954]
+position = Vector2(1000, -2)
+texture = ExtResource("5_4whon")
+
+[node name="Theatre" type="Sprite2D" parent="." unique_id=588841874]
+z_index = -999
+position = Vector2(967, 554)
+texture = ExtResource("6_kj7ij")
+
+[editable path="UI"]
+[editable path="UI/Lever"]
+[editable path="UI/Lever2"]
+[editable path="UI/Lever3"]

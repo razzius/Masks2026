@@ -31,7 +31,8 @@ position = Vector2(157.99998, -233.00002)
 occluder = SubResource("OccluderPolygon2D_e3072")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=977391977]
-position = Vector2(610, -471)
+position = Vector2(591, -281)
+scale = Vector2(2.5683594, 2.1103516)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_076hp")
 

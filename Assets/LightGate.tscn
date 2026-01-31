@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://g22m82tlsmfs"]
+
+[ext_resource type="Script" uid="uid://cec7ij6pe2i3c" path="res://scripts/Gate.gd" id="1_83ypm"]
+[ext_resource type="Texture2D" uid="uid://c0yst0ko6krfb" path="res://art/door_0000.png" id="2_hnxur"]
+[ext_resource type="Texture2D" uid="uid://coe2javbsfrvj" path="res://art/closeddoor_0000.png" id="3_mfauc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvlo7"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6m3a"]
+
+[sub_resource type="Gradient" id="Gradient_c4q5b"]
+offsets = PackedFloat32Array(0.70481926, 0.8674699)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ea576"]
+gradient = SubResource("Gradient_c4q5b")
+fill_from = Vector2(0.51304346, 0)
+fill_to = Vector2(0.53913045, 1)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0myk1"]
+polygon = PackedVector2Array(-240, 245, -240, -245, 240, -245, 240, 245, 215, 245, 215, -235, -215, -235, -215, 245)
+
+[node name="Gate" type="Node2D" unique_id=1733791318]
+scale = Vector2(2, 2)
+script = ExtResource("1_83ypm")
+openTex = ExtResource("2_hnxur")
+closeTex = ExtResource("3_mfauc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=540055640]
+position = Vector2(-294.5, -10.5)
+texture = ExtResource("3_mfauc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=44474892]
+position = Vector2(-294.5, -10.5)
+physics_material_override = SubResource("PhysicsMaterial_gvlo7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=922041905]
+scale = Vector2(8, 26)
+shape = SubResource("RectangleShape2D_x6m3a")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=791430710]
+position = Vector2(2.5, -151.5)
+scale = Vector2(100, 3000.3)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ea576")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1790763401]
+modulate = Color(1, 1, 1, 0.007843138)
+position = Vector2(3, -9)
+occluder = SubResource("OccluderPolygon2D_0myk1")
