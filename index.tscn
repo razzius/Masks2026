@@ -1,9 +1,21 @@
 [gd_scene format=3 uid="uid://bjovjvbld2etv"]
 
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_356j3"]
+[ext_resource type="Script" uid="uid://bi54f1idcojek" path="res://character_body_2d.gd" id="2_3bfj3"]
+[ext_resource type="Texture2D" uid="uid://dgit6v606cl47" path="res://maskcharacter.png" id="2_mbj17"]
 
 [node name="Node2D" type="Node2D" unique_id=2111431040]
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=790878252]
 position = Vector2(222, 257)
 texture = ExtResource("1_356j3")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=808142691]
+motion_mode = 1
+script = ExtResource("2_3bfj3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1095399518]
+
+[node name="Maskcharacter" type="Sprite2D" parent="CharacterBody2D" unique_id=1446319320]
+position = Vector2(777, 635)
+texture = ExtResource("2_mbj17")
