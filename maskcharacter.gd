@@ -25,5 +25,3 @@ func _physics_process(delta: float) -> void:
 		direction.z += 1
 	if Input.is_action_pressed("move_forward"):
 		direction.z -= 1
-
-	move_and_slide()
