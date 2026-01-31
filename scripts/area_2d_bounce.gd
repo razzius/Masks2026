@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,5 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print("HI")
-	transform.x = Vector2(20, 20 + delta * 50)
+	var velocity = Vector2(30, 30)
+		
+	position += velocity * delta
+	
