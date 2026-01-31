@@ -1,6 +1,6 @@
 extends Node
 
-var opened
+@export var opened : bool
 
 func _ready() -> void:
 	if(opened):
