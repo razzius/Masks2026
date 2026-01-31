@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 
 # Mask collided with something.
 func _on_rigid_body_2d_body_entered(body: Node) -> void:
-	print('blahhhhh')
+	#$RigidBody2D.linear_velocity.x = -$RigidBody2D.linear_velocity.x
+	pass
