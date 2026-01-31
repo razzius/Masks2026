@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bdpgbtx5o5bhp"]
+
+[ext_resource type="Texture2D" uid="uid://c0yst0ko6krfb" path="res://art/door_0000.png" id="1_3by16"]
+[ext_resource type="Texture2D" uid="uid://brojsd6irdc8h" path="res://art/door_0001.png" id="2_e57qk"]
+[ext_resource type="Texture2D" uid="uid://dycwm7qlrbswo" path="res://art/door_0002.png" id="3_8kkls"]
+[ext_resource type="Texture2D" uid="uid://dwekt6w85msnd" path="res://art/door_0003.png" id="4_n3qkk"]
+[ext_resource type="Texture2D" uid="uid://c8tnd5isebmcs" path="res://art/door_0004.png" id="5_24185"]
+[ext_resource type="Texture2D" uid="uid://dbd1cghfv23ye" path="res://art/door_0005.png" id="6_43wa1"]
+[ext_resource type="Texture2D" uid="uid://cdbgeue7hoklb" path="res://art/door_0006.png" id="7_qxw44"]
+[ext_resource type="Texture2D" uid="uid://bseqqnwc41bbf" path="res://art/door_0007.png" id="8_wra7n"]
+[ext_resource type="Texture2D" uid="uid://day508o4m34hj" path="res://art/door_0008.png" id="9_ctruc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_06d2e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3by16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e57qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8kkls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n3qkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_24185")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_43wa1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qxw44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wra7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ctruc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LyricScene" type="Node2D" unique_id=901075329]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1567105321]
+sprite_frames = SubResource("SpriteFrames_06d2e")
+frame_progress = 0.15483768
