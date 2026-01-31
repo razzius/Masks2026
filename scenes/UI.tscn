@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ulgg0vj6aucw"]
 
 [ext_resource type="PackedScene" uid="uid://fjwmfp7itbfr" path="res://Assets/Lever.tscn" id="1_dj8aq"]
+[ext_resource type="Texture2D" uid="uid://8n3xev17g3yo" path="res://art/leveloverlay.png" id="1_ro3t7"]
 
 [node name="UI" type="Control" unique_id=1760316433]
 layout_mode = 3
@@ -9,6 +10,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=435298159]
+position = Vector2(0, 232)
+scale = Vector2(0.79375, 0.78518516)
+texture = ExtResource("1_ro3t7")
+centered = false
 
 [node name="Lever" parent="." unique_id=901851183 instance=ExtResource("1_dj8aq")]
 position = Vector2(101, 937)
