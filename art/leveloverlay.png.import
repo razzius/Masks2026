@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg57ykg6ax84l"
-path="res://.godot/imported/maskcharacterthinking_0008.png-a8b13b889559335e529bec054df7f3f0.ctex"
+uid="uid://8n3xev17g3yo"
+path="res://.godot/imported/leveloverlay.png-a304b88181145a1e9fbb8851b3a88be5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/maskcharacterthinking_0008.png"
-dest_files=["res://.godot/imported/maskcharacterthinking_0008.png-a8b13b889559335e529bec054df7f3f0.ctex"]
+source_file="res://art/leveloverlay.png"
+dest_files=["res://.godot/imported/leveloverlay.png-a304b88181145a1e9fbb8851b3a88be5.ctex"]
 
 [params]
 
