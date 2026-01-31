@@ -22,5 +22,5 @@ texture = ExtResource("2_gvlo7")
 physics_material_override = SubResource("PhysicsMaterial_gvlo7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=922041905]
-scale = Vector2(18, 26)
+scale = Vector2(8, 26)
 shape = SubResource("RectangleShape2D_x6m3a")
