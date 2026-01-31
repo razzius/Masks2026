@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://e625levok1c3"]
 
 [ext_resource type="Script" uid="uid://cec7ij6pe2i3c" path="res://scripts/Gate.gd" id="1_x6m3a"]
+[ext_resource type="Texture2D" uid="uid://coe2javbsfrvj" path="res://art/closeddoor_0000.png" id="2_gvlo7"]
 [ext_resource type="Texture2D" uid="uid://c0yst0ko6krfb" path="res://art/door_0000.png" id="2_x6m3a"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvlo7"]
@@ -11,13 +12,15 @@ bounce = 1.0
 
 [node name="Gate" type="Node2D" unique_id=1733791318]
 script = ExtResource("1_x6m3a")
+openTex = ExtResource("2_x6m3a")
+closeTex = ExtResource("2_gvlo7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=540055640]
-texture = ExtResource("2_x6m3a")
+texture = ExtResource("2_gvlo7")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=44474892]
 physics_material_override = SubResource("PhysicsMaterial_gvlo7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=922041905]
-scale = Vector2(18, 26)
+scale = Vector2(8, 26)
 shape = SubResource("RectangleShape2D_x6m3a")

@@ -1,6 +1,9 @@
 extends Node
 class_name Gate
 
+@export var openTex : Texture
+@export var closeTex : Texture
+
 @export var opened : bool
 var sprite : Sprite2D
 var collider
@@ -19,12 +22,12 @@ func _process(delta: float) -> void:
 	pass
 
 func OpenDoor() -> void:
-	sprite.visible = false
+	sprite.texture = openTex
 	collider.disabled = true
 	opened = true
 	
 func CloseDoor() -> void:
-	sprite.visible = true
+	sprite.texture = closeTex
 	collider.disabled = false
 	opened = false
 	
