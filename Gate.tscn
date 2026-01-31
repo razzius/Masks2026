@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://e625levok1c3"]
 
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_54j8h"]
 [ext_resource type="Script" uid="uid://cec7ij6pe2i3c" path="res://scripts/Gate.gd" id="1_x6m3a"]
+[ext_resource type="Texture2D" uid="uid://c0yst0ko6krfb" path="res://art/door_0000.png" id="2_x6m3a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6m3a"]
 
@@ -9,9 +9,10 @@
 script = ExtResource("1_x6m3a")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=540055640]
-texture = ExtResource("1_54j8h")
+texture = ExtResource("2_x6m3a")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1714106858]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=922041905]
+scale = Vector2(18, 26)
 shape = SubResource("RectangleShape2D_x6m3a")
