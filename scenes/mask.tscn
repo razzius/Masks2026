@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bxkpmfiyt8o2f"]
+
+[ext_resource type="Script" uid="uid://dhrgt8k40l657" path="res://scripts/area_2d_bounce.gd" id="1_rv8xw"]
+[ext_resource type="Texture2D" uid="uid://bivr2khgssmkh" path="res://art/happymask.png" id="2_0d8jk"]
+
+[node name="Mask" type="Node2D" unique_id=1359150612]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=881163624]
+script = ExtResource("1_rv8xw")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1437822850]
+texture = ExtResource("2_0d8jk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=687088489]
+polygon = PackedVector2Array(0, -107, 118, -89, 105, 0, 84, 58, 51, 92, 0, 108, -53, 93, -84, 60, -104, 0, -121, -92)
