@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_nbqlh"]
 [ext_resource type="PackedScene" uid="uid://e625levok1c3" path="res://Assets/Gate.tscn" id="2_oqog7"]
 [ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://scenes/mask.tscn" id="3_q4r7y"]
+[ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="4_bl4ac"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqog7"]
 texture = ExtResource("1_nbqlh")
@@ -86,3 +87,10 @@ scale = Vector2(0.75, 1)
 
 [node name="Mask" parent="." unique_id=1359150612 instance=ExtResource("3_q4r7y")]
 position = Vector2(1278, 401)
+
+[node name="UI" parent="." unique_id=1760316433 instance=ExtResource("4_bl4ac")]
+
+[editable path="UI"]
+[editable path="UI/Lever"]
+[editable path="UI/Lever2"]
+[editable path="UI/Lever3"]

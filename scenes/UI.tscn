@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ulgg0vj6aucw"]
+
+[ext_resource type="PackedScene" uid="uid://fjwmfp7itbfr" path="res://Assets/Lever.tscn" id="1_dj8aq"]
+
+[node name="UI" type="Control" unique_id=1760316433]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lever" parent="." unique_id=901851183 instance=ExtResource("1_dj8aq")]
+position = Vector2(101, 937)
+
+[node name="Lever2" parent="." unique_id=2042641525 instance=ExtResource("1_dj8aq")]
+position = Vector2(247, 937)
+
+[node name="Lever3" parent="." unique_id=888916594 instance=ExtResource("1_dj8aq")]
+position = Vector2(388, 933)
