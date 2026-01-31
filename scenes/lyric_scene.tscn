@@ -9,6 +9,23 @@
 [ext_resource type="Texture2D" uid="uid://cdbgeue7hoklb" path="res://art/door_0006.png" id="7_qxw44"]
 [ext_resource type="Texture2D" uid="uid://bseqqnwc41bbf" path="res://art/door_0007.png" id="8_wra7n"]
 [ext_resource type="Texture2D" uid="uid://day508o4m34hj" path="res://art/door_0008.png" id="9_ctruc"]
+[ext_resource type="Texture2D" uid="uid://bbni44l4eb2ry" path="res://art/lever_0000.png" id="10_v1sb7"]
+[ext_resource type="Texture2D" uid="uid://pmabrvie0dyj" path="res://art/lever_0001.png" id="11_qq35q"]
+[ext_resource type="Texture2D" uid="uid://db6hs1tnmoh3u" path="res://art/lever_0002.png" id="12_2j42c"]
+[ext_resource type="Texture2D" uid="uid://d14geraoi5giv" path="res://art/lever_0003.png" id="13_q1pin"]
+[ext_resource type="Texture2D" uid="uid://bm048feeun7jo" path="res://art/lever_0004.png" id="14_1bgjx"]
+[ext_resource type="Texture2D" uid="uid://bie7q8e5ehqai" path="res://art/lever_0005.png" id="15_0skcr"]
+[ext_resource type="Texture2D" uid="uid://bnp46gd81cvon" path="res://art/lever_0006.png" id="16_bn7sw"]
+[ext_resource type="Texture2D" uid="uid://dlcm83n7bg8sn" path="res://art/lever_0007.png" id="17_ilvuv"]
+[ext_resource type="Texture2D" uid="uid://bgyobaujwfnxw" path="res://art/lever_0008.png" id="18_a13o1"]
+[ext_resource type="Texture2D" uid="uid://cqldlvmk10paq" path="res://art/lever_0009.png" id="19_ch8i3"]
+[ext_resource type="Texture2D" uid="uid://loiml73j6kl" path="res://art/lever_0010.png" id="20_ciakt"]
+[ext_resource type="Texture2D" uid="uid://g33ujnaq56n0" path="res://art/lever_0011.png" id="21_hdxr0"]
+[ext_resource type="Texture2D" uid="uid://fsvnojxpmgp1" path="res://art/leverpull_0000.png" id="22_fc673"]
+[ext_resource type="Texture2D" uid="uid://bb5afj5svaeob" path="res://art/leverpull_0001.png" id="23_vc1yq"]
+[ext_resource type="Texture2D" uid="uid://cia6xxho2g8uk" path="res://art/leverpull_0002.png" id="24_yecrt"]
+[ext_resource type="Texture2D" uid="uid://d287kbal16s18" path="res://art/leverpull_0003.png" id="25_1sg8o"]
+[ext_resource type="Texture2D" uid="uid://cmdkux4lytgqt" path="res://art/leverpull_0004.png" id="26_uljna"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06d2e"]
 animations = [{
@@ -41,12 +58,75 @@ animations = [{
 "texture": ExtResource("9_ctruc")
 }],
 "loop": true,
-"name": &"default",
+"name": &"door",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_v1sb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qq35q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2j42c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_q1pin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1bgjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0skcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bn7sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ilvuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_a13o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ch8i3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ciakt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hdxr0")
+}],
+"loop": true,
+"name": &"lever",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_fc673")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_vc1yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_yecrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1sg8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_uljna")
+}],
+"loop": true,
+"name": &"leverpull",
 "speed": 5.0
 }]
 
 [node name="LyricScene" type="Node2D" unique_id=901075329]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1567105321]
+position = Vector2(-195, 3)
 sprite_frames = SubResource("SpriteFrames_06d2e")
-frame_progress = 0.15483768
+animation = &"leverpull"
+frame_progress = 0.11380354
