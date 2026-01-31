@@ -16,3 +16,7 @@ func _deferred_change_scene(path):
 	current_scene = s.instantiate()
 	get_tree().root.add_child(current_scene)
 	get_tree().current_scene = current_scene
+
+# Exit the game
+func exit_game() -> void:
+	get_tree().quit()
