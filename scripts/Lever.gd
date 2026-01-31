@@ -1,6 +1,6 @@
 extends Button
 
-@export var gates = []
+@export var gates : Array[Gate] = []
 var moving : bool
 
 func _ready() -> void:
