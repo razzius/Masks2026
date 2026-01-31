@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_nbqlh"]
 [ext_resource type="PackedScene" uid="uid://e625levok1c3" path="res://Assets/Gate.tscn" id="2_oqog7"]
+[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://scenes/mask.tscn" id="3_q4r7y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqog7"]
 texture = ExtResource("1_nbqlh")
@@ -82,3 +83,6 @@ tile_set = SubResource("TileSet_q4r7y")
 [node name="Gate" parent="." unique_id=1733791318 instance=ExtResource("2_oqog7")]
 position = Vector2(961, 533)
 scale = Vector2(0.75, 1)
+
+[node name="Mask" parent="." unique_id=1359150612 instance=ExtResource("3_q4r7y")]
+position = Vector2(1278, 401)
