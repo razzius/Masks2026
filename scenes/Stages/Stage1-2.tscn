@@ -50,8 +50,7 @@ rotation = 3.1415927
 [node name="Lever" parent="UI" index="1" unique_id=901851183]
 position = Vector2(100, 930)
 
-[node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates", "lights")]
-gates = [null]
+[node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("lights")]
 lights = [NodePath("../../../Spotlight")]
 
 [node name="Lever2" parent="UI" index="2" unique_id=2042641525]
