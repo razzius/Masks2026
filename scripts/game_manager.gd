@@ -6,8 +6,11 @@ var current_scene = null
 var current_level = 0
 var levels = [
 	'res://scenes/Stages/Stage1.tscn',
+	'res://scenes/Stages/Stage1-2.tscn',
 	'res://scenes/Stages/StageRazzi.tscn',
+	'res://scenes/Stages/Stage2-1.tscn',
 	'res://scenes/Stages/StageRazziSilly.tscn',
+	'res://scenes/Stages/Stage4.tscn',
 	'res://scenes/Stages/StageCole.tscn'
 ]
 

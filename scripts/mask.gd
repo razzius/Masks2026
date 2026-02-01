@@ -9,16 +9,21 @@ signal OnMaskMerged
 @export var mask_scale : float = 1.0
 
 var deleted = false
+var sound : AudioStreamPlayer2D
 var animSprite : AnimatedSprite2D
 var rng : RandomNumberGenerator = RandomNumberGenerator.new()
+var audioPlayer : AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if is_light:
 		$RigidBody2D.set_collision_mask_value(2, true)
+	audioPlayer = $AudioStreamPlayer2D
+	#audioPlayer.volume_db
 	animSprite = $AnimatedSprite2D
 	animSprite.visible = false
 	animSprite.animation_finished.connect(DeleteSprite)
+	sound = $AudioStreamPlayer2D
 	$RigidBody2D/CollisionPolygon2D.global_scale = Vector2(mask_scale, mask_scale)
 	$RigidBody2D/Sprite2D.global_scale = Vector2(mask_scale, mask_scale)
 	$AnimatedSprite2D.global_scale = Vector2(mask_scale / 2, mask_scale / 2)
@@ -61,8 +66,10 @@ func _on_rigid_body_2d_body_entered(body: Node) -> void:
 				animSprite.global_position = new_position
 				animSprite.visible = true
 				animSprite.play("merge")
+				sound.play(1.0)
 			deleted = true
 			body.queue_free()
+	audioPlayer.play()
 	Bounce()
 	if body.get_parent() as Spotlight:
 		if not is_light:

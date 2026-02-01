@@ -50,17 +50,14 @@ rotation = 3.1415927
 [node name="Lever" parent="UI" index="1" unique_id=901851183]
 position = Vector2(100, 930)
 
-[node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
-gates = [null]
+[node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("lights")]
+lights = [NodePath("../../../Spotlight")]
 
 [node name="Lever2" parent="UI" index="2" unique_id=2042641525]
 position = Vector2(250, 930)
 
 [node name="Lever3" parent="UI" index="3" unique_id=888916594]
 position = Vector2(400, 930)
-
-[node name="Button" parent="UI/Lever3" index="0" unique_id=1926699541 node_paths=PackedStringArray("lights")]
-lights = [NodePath("../../../Spotlight")]
 
 [node name="Banner" type="Sprite2D" parent="." unique_id=501511650]
 position = Vector2(461, 113)

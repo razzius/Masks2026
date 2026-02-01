@@ -3,12 +3,13 @@
 [ext_resource type="Script" uid="uid://duvdnqk8w8yk1" path="res://scripts/mask.gd" id="1_rv8xw"]
 [ext_resource type="Texture2D" uid="uid://bivr2khgssmkh" path="res://art/happymask.png" id="2_0d8jk"]
 [ext_resource type="Script" uid="uid://hd2p4r4nckvh" path="res://scripts/mask_rigid_body_2d.gd" id="2_xsism"]
-[ext_resource type="Script" path="res://scenes/sprite_2d.gd" id="4_xsism"]
+[ext_resource type="Script" uid="uid://v82cgyj2q62y" path="res://scenes/sprite_2d.gd" id="4_xsism"]
 [ext_resource type="Texture2D" uid="uid://b8cn07jhphvmy" path="res://art/maskrotate_0000.png" id="5_p81wo"]
 [ext_resource type="Texture2D" uid="uid://ck83li11ph41r" path="res://art/maskrotate_0001.png" id="6_yaim1"]
 [ext_resource type="Texture2D" uid="uid://b8mykqujw35t7" path="res://art/maskrotate_0002.png" id="7_rbq6t"]
 [ext_resource type="Texture2D" uid="uid://g8i7qcfxweg7" path="res://art/maskrotate_0003.png" id="8_dtjkn"]
 [ext_resource type="Texture2D" uid="uid://cljgeimgtuy11" path="res://art/maskrotate_0004.png" id="9_xcesk"]
+[ext_resource type="AudioStream" uid="uid://bhqgcbend47ln" path="res://Assets/HardTap.wav" id="10_yaim1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rv8xw"]
 bounce = 1.0
@@ -63,5 +64,9 @@ sprite_frames = SubResource("SpriteFrames_46csh")
 animation = &"merge"
 frame = 4
 frame_progress = 1.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1362107024]
+stream = ExtResource("10_yaim1")
+volume_db = -30.0
 
 [connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]

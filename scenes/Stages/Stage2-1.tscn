@@ -1,20 +1,20 @@
-[gd_scene format=4 uid="uid://codxvuptqq8n5"]
+[gd_scene format=4 uid="uid://vifa87uc2ql5"]
 
-[ext_resource type="PackedScene" uid="uid://e625levok1c3" path="res://Assets/Gate.tscn" id="1_ytq1i"]
-[ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="2_4r1lh"]
-[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://Assets/mask.tscn" id="3_lp70n"]
-[ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="4_lxwnn"]
-[ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="5_woj1c"]
-[ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="6_0uus6"]
-[ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="7_2hvqp"]
-[ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="8_mvcw8"]
+[ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="1_ktsnx"]
+[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://Assets/mask.tscn" id="2_msvhe"]
+[ext_resource type="PackedScene" uid="uid://dnwmd3dggw6b7" path="res://Assets/Spotlight.tscn" id="3_ephjr"]
+[ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="4_n5llj"]
+[ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="5_xc322"]
+[ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="6_60q3r"]
+[ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="7_pcek2"]
+[ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="8_2fepu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_16pka"]
 friction = 0.0
 bounce = 1.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_16pka"]
-texture = ExtResource("2_4r1lh")
+texture = ExtResource("1_ktsnx")
 texture_region_size = Vector2i(1000, 1000)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-500, -500, 500, -500, 500, 500, -500, 500)
@@ -27,53 +27,77 @@ sources/0 = SubResource("TileSetAtlasSource_16pka")
 
 [node name="Stage" type="Node2D" unique_id=253650236]
 
-[node name="Gate" parent="." unique_id=1733791318 instance=ExtResource("1_ytq1i")]
-position = Vector2(961, 533)
-scale = Vector2(0.75, 1)
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2009943806]
 scale = Vector2(0.1, 0.1)
 tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAABAAkAAAAAAAAAAAABAAgAAAAAAAAAAAABAAcAAAAAAAAAAAABAAYAAAAAAAAAAAABAAUAAAAAAAAAAAABAAQAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAAAAAAAAASAAAAAAAAAAAAAAATAAAAAAAAAAAAAAASAAEAAAAAAAAAAAASAAIAAAAAAAAAAAASAAMAAAAAAAAAAAASAAQAAAAAAAAAAAASAAUAAAAAAAAAAAASAAYAAAAAAAAAAAASAAcAAAAAAAAAAAASAAgAAAAAAAAAAAASAAkAAAAAAAAAAAASAAoAAAAAAAAAAAATAAoAAAAAAAAAAAATAAkAAAAAAAAAAAATAAgAAAAAAAAAAAATAAcAAAAAAAAAAAATAAYAAAAAAAAAAAATAAUAAAAAAAAAAAATAAQAAAAAAAAAAAATAAMAAAAAAAAAAAATAAIAAAAAAAAAAAATAAEAAAAAAAAAAAACAAoAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAARAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAADAAoAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAARAAEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_f1ilw")
 
-[node name="HappyMask" parent="." unique_id=1359150612 instance=ExtResource("3_lp70n")]
-position = Vector2(604, 397)
-scale = Vector2(0.5, 0.5)
+[node name="HappyMask" parent="." unique_id=1359150612 instance=ExtResource("2_msvhe")]
+position = Vector2(391, 338)
 is_light = true
 
-[node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("3_lp70n")]
-position = Vector2(1208, 794)
+[node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("2_msvhe")]
+position = Vector2(881, 377)
 
-[node name="Curtains" parent="." unique_id=575676599 instance=ExtResource("4_lxwnn")]
+[node name="HappyMask3" parent="." unique_id=1479249393 instance=ExtResource("2_msvhe")]
+position = Vector2(1124, 599)
 
-[node name="UI" parent="." unique_id=1760316433 instance=ExtResource("5_woj1c")]
+[node name="HappyMask4" parent="." unique_id=958862012 instance=ExtResource("2_msvhe")]
+position = Vector2(1652, 788)
+is_light = true
+
+[node name="Spotlight" parent="." unique_id=1733791318 groups=["Lights"] instance=ExtResource("3_ephjr")]
+position = Vector2(637, 14)
+rotation = 3.1415927
+
+[node name="Spotlight2" parent="." unique_id=837350782 instance=ExtResource("3_ephjr")]
+position = Vector2(770, 652)
+rotation = -1.5707964
+
+[node name="Spotlight3" parent="." unique_id=325506951 instance=ExtResource("3_ephjr")]
+position = Vector2(1417, 606)
+rotation = 1.5707964
+
+[node name="Spotlight4" parent="." unique_id=798069574 instance=ExtResource("3_ephjr")]
+position = Vector2(1428, 577)
+rotation = -3.1415925
+
+[node name="Curtains" parent="." unique_id=575676599 instance=ExtResource("4_n5llj")]
+
+[node name="UI" parent="." unique_id=1760316433 instance=ExtResource("5_xc322")]
 
 [node name="Lever" parent="UI" index="1" unique_id=901851183]
 position = Vector2(100, 930)
 
-[node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
-gates = [NodePath("../../../Gate")]
+[node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("lights")]
+lights = [NodePath("../../../Spotlight"), NodePath("../../../Spotlight3")]
 
 [node name="Lever2" parent="UI" index="2" unique_id=2042641525]
 position = Vector2(250, 930)
 
+[node name="Button" parent="UI/Lever2" index="0" unique_id=1926699541 node_paths=PackedStringArray("lights")]
+lights = [NodePath("../../../Spotlight2"), NodePath("../../../Spotlight4")]
+
 [node name="Lever3" parent="UI" index="3" unique_id=888916594]
 position = Vector2(400, 930)
 
+[node name="Button" parent="UI/Lever3" index="0" unique_id=1926699541 node_paths=PackedStringArray("lights")]
+lights = [NodePath("../../../Spotlight")]
+
 [node name="Banner" type="Sprite2D" parent="." unique_id=501511650]
 position = Vector2(461, 113)
-texture = ExtResource("6_0uus6")
+texture = ExtResource("6_60q3r")
 
 [node name="Banner" type="Sprite2D" parent="Banner" unique_id=1633536954]
 position = Vector2(1000, -2)
-texture = ExtResource("6_0uus6")
+texture = ExtResource("6_60q3r")
 
 [node name="Theatre" type="Sprite2D" parent="." unique_id=588841874]
 z_index = -999
 position = Vector2(967, 554)
-texture = ExtResource("7_2hvqp")
+texture = ExtResource("7_pcek2")
 
-[node name="Stagehand" parent="." unique_id=477236684 instance=ExtResource("8_mvcw8")]
+[node name="Stagehand" parent="." unique_id=477236684 instance=ExtResource("8_2fepu")]
 position = Vector2(1788, 858)
 scale = Vector2(0.5, 0.5)
 
