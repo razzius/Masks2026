@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0ljlbghyicvi" path="res://scripts/title_screen.gd" id="1_fgkus"]
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="2_sa3yf"]
+[ext_resource type="Texture2D" uid="uid://cyiysshramhut" path="res://art/gitlogolong.png" id="3_e54dn"]
 [ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="3_s4lrb"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="4_mgrm8"]
 [ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="5_dc4i4"]
@@ -24,9 +25,16 @@ offset_bottom = 373.0
 grow_horizontal = 2
 
 [node name="Title" type="Label" parent="CanvasLayer/CenterContainer1" unique_id=248441076]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 102
 text = "Get It Together!"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/CenterContainer1" unique_id=1733091570]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_e54dn")
+centered = false
+offset = Vector2(300, 0)
 
 [node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer" unique_id=308644519]
 anchors_preset = 8
