@@ -10,9 +10,7 @@ func _process(delta: float) -> void:
 	pass
 
 func mouse_entered() -> void:
-	print("over")
 	icon = load("res://art/quit.png")
 	
 func mouse_exited() -> void:
-	print("out")
 	icon = load("res://art/quitclickedon.png")

@@ -17,7 +17,6 @@ var levels = [
 
 func _ready() -> void:
 	var root = get_tree().root
-	music = load('res://scenes/Music.tscn')
 	current_scene = root.get_child(-1)
 
 func _process(_delta: float) -> void:
