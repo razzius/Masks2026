@@ -2,8 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://fjwmfp7itbfr" path="res://Assets/Lever.tscn" id="1_dj8aq"]
 [ext_resource type="Texture2D" uid="uid://8n3xev17g3yo" path="res://art/leveloverlay.png" id="1_ro3t7"]
-[ext_resource type="Texture2D" uid="uid://b7486sddcg4r6" path="res://art/bluelever_0000.png" id="3_5en4g"]
-[ext_resource type="Texture2D" uid="uid://bw7ovah10hcsr" path="res://art/greenlever_0000.png" id="4_ua6yw"]
 
 [node name="UI" type="Control" unique_id=1760316433]
 layout_mode = 3
@@ -14,6 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=435298159]
+modulate = Color(1, 1, 1, 0.39215687)
 position = Vector2(0, 232)
 scale = Vector2(0.79375, 0.78518516)
 texture = ExtResource("1_ro3t7")
@@ -24,8 +23,6 @@ position = Vector2(101, 937)
 
 [node name="Lever2" parent="." unique_id=2042641525 instance=ExtResource("1_dj8aq")]
 position = Vector2(247, 937)
-texture = ExtResource("3_5en4g")
 
 [node name="Lever3" parent="." unique_id=888916594 instance=ExtResource("1_dj8aq")]
 position = Vector2(388, 933)
-texture = ExtResource("4_ua6yw")
