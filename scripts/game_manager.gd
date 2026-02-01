@@ -63,4 +63,9 @@ func exit_to_menu() -> void:
 
 # Exit the game
 func exit_game() -> void:
+	var curtains = current_scene.get_node('CanvasLayer/Curtains')
+	curtains.animation_finished.connect(quit)
+	curtains.close()
+
+func quit() -> void:
 	get_tree().quit()
