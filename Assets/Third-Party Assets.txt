@@ -1,2 +1,3 @@
 Gate.wav: https://freesound.org/people/N-RAZM/sounds/400327/
 Spotlight.wav: https://freesound.org/people/reidmangan/sounds/49013/
+Applause.wav: https://freesound.org/people/SoAM_Sound_of_Any_Motion/sounds/832949/
