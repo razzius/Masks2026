@@ -63,7 +63,7 @@ func _on_rigid_body_2d_body_entered(body: Node) -> void:
 				animSprite.global_position = new_position
 				animSprite.visible = true
 				animSprite.play("merge")
-				sound.play()
+				sound.play(1.0)
 			deleted = true
 			body.queue_free()
 	Bounce()
