@@ -26,10 +26,12 @@ layout_mode = 2
 
 [node name="StartButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1344575416]
 layout_mode = 2
+theme_override_font_sizes/font_size = 56
 text = "Start"
 
 [node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=947926400]
 layout_mode = 2
+theme_override_font_sizes/font_size = 56
 text = "Quit"
 
 [connection signal="button_down" from="CanvasLayer/CenterContainer/VBoxContainer/StartButton" to="." method="_on_button_button_down"]
