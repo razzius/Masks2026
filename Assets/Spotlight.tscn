@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dnwmd3dggw6b7"]
 
 [ext_resource type="Script" uid="uid://bsdg2c5d2thf5" path="res://scripts/Spotlight.gd" id="1_5hp4p"]
+[ext_resource type="Texture2D" uid="uid://dpab20x8o4oua" path="res://art/spotlightoff.png" id="2_amtbn"]
+[ext_resource type="AudioStream" uid="uid://h1nqnhl63ewb" path="res://Assets/Spotlight.wav" id="3_ey22q"]
 
 [sub_resource type="Gradient" id="Gradient_nxaxs"]
 offsets = PackedFloat32Array(0.6204819, 0.7710843)
@@ -42,3 +44,12 @@ polygon = PackedVector2Array(0, 1, -110, -640, 110, -640)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=754995444]
 shape = SubResource("SegmentShape2D_nxaxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1001619029]
+position = Vector2(-2.4999998, -25.499998)
+rotation = 3.1415927
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_amtbn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1199926254]
+stream = ExtResource("3_ey22q")

@@ -29,3 +29,4 @@ func ToggleLight() -> void:
 	$PointLight2D.enabled = active
 	$StaticBody2D/CollisionPolygon2D.set_deferred("disabled", not active)
 	$StaticBody2D2/CollisionShape2D2.set_deferred("disabled", not active)
+	$AudioStreamPlayer2D.play()
