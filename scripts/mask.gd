@@ -12,11 +12,14 @@ var deleted = false
 var sound : AudioStreamPlayer2D
 var animSprite : AnimatedSprite2D
 var rng : RandomNumberGenerator = RandomNumberGenerator.new()
+var audioPlayer : AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if is_light:
 		$RigidBody2D.set_collision_mask_value(2, true)
+	audioPlayer = $AudioStreamPlayer2D
+	#audioPlayer.volume_db
 	animSprite = $AnimatedSprite2D
 	animSprite.visible = false
 	animSprite.animation_finished.connect(DeleteSprite)
@@ -66,6 +69,7 @@ func _on_rigid_body_2d_body_entered(body: Node) -> void:
 				sound.play(1.0)
 			deleted = true
 			body.queue_free()
+	audioPlayer.play()
 	Bounce()
 	if body.get_parent() as Spotlight:
 		if not is_light:
