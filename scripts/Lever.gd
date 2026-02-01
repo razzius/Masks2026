@@ -1,13 +1,15 @@
 extends Button
 
 @export var gates : Array[Gate] = []
-var spriteFrames : SpriteFrames
 
+var animSprite : AnimatedSprite2D
 var moving = false
 var leverUp = true
 
 func _ready() -> void:
-	spriteFrames = get_parent().sprite_frames
+	animSprite = get_parent()
+	animSprite.play("idle")
+	
 
 func _process(delta: float) -> void:
 	pass
@@ -18,15 +20,15 @@ func _pressed() -> void:
 		ChangeDoors()
 		
 		if(leverUp):
-			get_parent().play("slide_down")
+			animSprite.play("slide_down")
 			leverUp = false
 		else:
-			get_parent().play_backwards("slide_down")
+			animSprite.play_backwards("slide_down")
 			leverUp = true
-		
-		moving = false
-		
 
 func ChangeDoors() -> void:
 	for gate in gates:
 		gate.ToggleDoor()
+
+func OnAnimationFinished() -> void:
+	moving = false

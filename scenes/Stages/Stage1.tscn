@@ -5,12 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://scenes/mask.tscn" id="3_q4r7y"]
 [ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="4_bl4ac"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="5_50gbc"]
-[ext_resource type="Texture2D" uid="uid://fsvnojxpmgp1" path="res://art/leverpull_0000.png" id="5_oysxf"]
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="6_16pka"]
-[ext_resource type="Texture2D" uid="uid://bb5afj5svaeob" path="res://art/leverpull_0001.png" id="6_fss4e"]
-[ext_resource type="Texture2D" uid="uid://cia6xxho2g8uk" path="res://art/leverpull_0002.png" id="7_x1jvo"]
-[ext_resource type="Texture2D" uid="uid://d287kbal16s18" path="res://art/leverpull_0003.png" id="8_2k305"]
-[ext_resource type="Texture2D" uid="uid://cmdkux4lytgqt" path="res://art/leverpull_0004.png" id="9_hmdnv"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_16pka"]
 friction = 0.0
@@ -27,29 +22,6 @@ tile_size = Vector2i(1000, 1000)
 physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_16pka")
 sources/0 = SubResource("TileSetAtlasSource_16pka")
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_122sm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_oysxf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_fss4e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_x1jvo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_2k305")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_hmdnv")
-}],
-"loop": false,
-"name": &"slide_down",
-"speed": 15.0
-}]
 
 [node name="Stage1" type="Node2D" unique_id=253650236]
 
@@ -69,7 +41,6 @@ position = Vector2(604, 397)
 
 [node name="Lever" parent="UI" index="1" unique_id=901851183]
 position = Vector2(100, 930)
-sprite_frames = SubResource("SpriteFrames_122sm")
 
 [node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
 gates = [NodePath("../../../Gate")]
