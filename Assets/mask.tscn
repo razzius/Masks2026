@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bxkpmfiyt8o2f"]
 
-[ext_resource type="Script" uid="uid://duvdnqk8w8yk1" path="res://scenes/mask.gd" id="1_rv8xw"]
+[ext_resource type="Script" uid="uid://duvdnqk8w8yk1" path="res://scripts/mask.gd" id="1_rv8xw"]
 [ext_resource type="Texture2D" uid="uid://bivr2khgssmkh" path="res://art/happymask.png" id="2_0d8jk"]
-[ext_resource type="Script" uid="uid://hd2p4r4nckvh" path="res://scripts/mask_rigid_body_2d.gd" id="2_xsism"]
-[ext_resource type="Script" uid="uid://v82cgyj2q62y" path="res://scenes/sprite_2d.gd" id="4_xsism"]
+[ext_resource type="Script" path="res://scripts/mask_rigid_body_2d.gd" id="2_xsism"]
+[ext_resource type="Script" path="res://scenes/sprite_2d.gd" id="4_xsism"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rv8xw"]
 bounce = 1.0
 
-[node name="Mask" type="Node2D" unique_id=1359150612]
+[node name="Mask" type="Node2D" unique_id=1359150612 groups=["Masks"]]
 script = ExtResource("1_rv8xw")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1479127195]

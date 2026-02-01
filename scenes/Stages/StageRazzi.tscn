@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://e625levok1c3" path="res://Assets/Gate.tscn" id="1_883bo"]
 [ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="2_qhnut"]
-[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://scenes/mask.tscn" id="3_l46ht"]
+[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://Assets/mask.tscn" id="3_l46ht"]
 [ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="4_1clf4"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="5_dsjlv"]
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="6_212pt"]

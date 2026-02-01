@@ -9,6 +9,13 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("Escape"):
 		exit_to_menu()
+		
+func check_level_complete() -> void:
+	print("Checking level started")
+	var masks = get_tree().get_nodes_in_group("Masks")
+	if(masks.all(func(element): return element.deleted)):
+		print("All deleted")
+		
 
 # Change to the scene at the given path.
 func change_scene(path) -> void:
@@ -20,6 +27,9 @@ func _deferred_change_scene(path):
 	current_scene = s.instantiate()
 	get_tree().root.add_child(current_scene)
 	get_tree().current_scene = current_scene
+	var masks = get_tree().get_nodes_in_group("Masks")
+	for mask in masks:
+		mask.OnMaskMerged.connect(check_level_complete)
 
 func exit_to_menu() -> void:
 	if current_scene.name != 'TitleScreen':
