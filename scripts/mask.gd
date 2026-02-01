@@ -41,8 +41,6 @@ func Bounce() -> void:
 		rb.linear_velocity.y = clampf(rb.linear_velocity.y, -minVelocity, -maxVelocity)
 	if rb.linear_velocity.y > 0:
 		rb.linear_velocity.y = clampf(rb.linear_velocity.y, minVelocity, maxVelocity)
-		
-	print(rb.linear_velocity)
 
 func DeleteSprite() -> void:
 	queue_free()
