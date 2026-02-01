@@ -86,7 +86,6 @@
 [ext_resource type="Texture2D" uid="uid://sec6dslb0sqt" path="res://art/greendoor_0001.png" id="43_58i4k"]
 [ext_resource type="Texture2D" uid="uid://dc4glkgs72e1l" path="res://art/maskcharacterworried_0007.png" id="43_spd7l"]
 [ext_resource type="Texture2D" uid="uid://cqaqg22wkx1xv" path="res://art/greenlever_0008.png" id="43_wtyva"]
-[ext_resource type="Texture2D" uid="uid://cgk1n8iq3drjd" path="res://art/maskcharacterworried_0008.png" id="44_1qa7r"]
 [ext_resource type="Texture2D" uid="uid://c4pijbhgv6s14" path="res://art/greendoor_0002.png" id="44_2g6vt"]
 [ext_resource type="Texture2D" uid="uid://bysfoqabef500" path="res://art/greenlever_0009.png" id="44_uil72"]
 [ext_resource type="Texture2D" uid="uid://c6y1n31y2o1dc" path="res://art/greenleverpull_0000.png" id="45_rwkp1"]
@@ -512,7 +511,10 @@ animations = [{
 "texture": ExtResource("43_spd7l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_1qa7r")
+"texture": ExtResource("43_spd7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_spd7l")
 }],
 "loop": true,
 "name": &"maskcharacterworried",
@@ -633,7 +635,9 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1567105321]
 position = Vector2(-136, -95)
 sprite_frames = SubResource("SpriteFrames_06d2e")
-animation = &"leverpull"
+animation = &"maskcharacterworried"
+frame = 4
+frame_progress = 0.11461993
 
 [node name="Gitlogolong" type="Sprite2D" parent="." unique_id=987870945]
 position = Vector2(-641, 356)
