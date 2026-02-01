@@ -4,8 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="2_sa3yf"]
 [ext_resource type="Texture2D" uid="uid://cyiysshramhut" path="res://art/gitlogolong.png" id="3_e54dn"]
 [ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="3_s4lrb"]
+[ext_resource type="Texture2D" uid="uid://bbkil0rvlmiyu" path="res://art/startclickedon.png" id="4_cs5ya"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="4_mgrm8"]
 [ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="5_dc4i4"]
+[ext_resource type="Texture2D" uid="uid://bbusqmxyfn4r7" path="res://art/quitclickedon.png" id="5_mykxm"]
 
 [node name="TitleScreen" type="Node2D" unique_id=736705505]
 script = ExtResource("1_fgkus")
@@ -42,12 +44,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -70.0
-offset_top = 185.0
-offset_right = 70.0
-offset_bottom = 359.0
+offset_left = -325.5
+offset_top = 160.0
+offset_right = 325.50024
+offset_bottom = 866.0005
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer2" unique_id=345670990]
 layout_mode = 2
@@ -55,12 +59,15 @@ layout_mode = 2
 [node name="StartButton" type="Button" parent="CanvasLayer/CenterContainer2/VBoxContainer" unique_id=1344575416]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
-text = "Start"
+icon = ExtResource("4_cs5ya")
+flat = true
+icon_alignment = 1
 
 [node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer2/VBoxContainer" unique_id=947926400]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
-text = "Quit"
+icon = ExtResource("5_mykxm")
+flat = true
 
 [node name="Curtains" parent="CanvasLayer" unique_id=575676599 instance=ExtResource("3_s4lrb")]
 
