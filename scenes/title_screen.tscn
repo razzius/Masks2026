@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="2_sa3yf"]
 [ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="3_s4lrb"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="4_mgrm8"]
+[ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="5_dc4i4"]
 
 [node name="TitleScreen" type="Node2D" unique_id=736705505]
 script = ExtResource("1_fgkus")
@@ -25,7 +26,7 @@ grow_horizontal = 2
 [node name="Title" type="Label" parent="CanvasLayer/CenterContainer1" unique_id=248441076]
 layout_mode = 2
 theme_override_font_sizes/font_size = 102
-text = "What Should We Call This?"
+text = "Get It Together!"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer" unique_id=308644519]
 anchors_preset = 8
@@ -62,6 +63,12 @@ texture = ExtResource("4_mgrm8")
 [node name="Banner" type="Sprite2D" parent="CanvasLayer/Banner" unique_id=787100411]
 position = Vector2(1000, -2)
 texture = ExtResource("4_mgrm8")
+
+[node name="Stagehand" parent="." unique_id=477236684 instance=ExtResource("5_dc4i4")]
+position = Vector2(961, 553)
+scale = Vector2(0.5, 0.5)
+animation = &"worried"
+frame_progress = 0.0
 
 [connection signal="button_down" from="CanvasLayer/CenterContainer2/VBoxContainer/StartButton" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer2/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

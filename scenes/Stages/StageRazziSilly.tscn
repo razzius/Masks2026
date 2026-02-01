@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="4_enwga"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="5_hp2py"]
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="6_lfmj7"]
+[ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="8_4iubr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_16pka"]
 friction = 0.0
@@ -111,6 +112,10 @@ z_index = -999
 position = Vector2(967, 554)
 texture = ExtResource("6_lfmj7")
 metadata/_edit_lock_ = true
+
+[node name="Stagehand" parent="." unique_id=477236684 instance=ExtResource("8_4iubr")]
+position = Vector2(1788, 858)
+scale = Vector2(0.5, 0.5)
 
 [editable path="UI"]
 [editable path="UI/Lever"]

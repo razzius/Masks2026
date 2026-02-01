@@ -61,7 +61,9 @@ func _deferred_change_scene(path):
 	var masks = get_tree().get_nodes_in_group("Masks")
 	for mask in masks:
 		mask.OnMaskMerged.connect(check_level_complete)
-	character = get_tree().get_nodes_in_group("Character")[0]
+		
+	if get_tree().get_nodes_in_group("Character"):
+		character = get_tree().get_nodes_in_group("Character")[0]
 		
 func start_scene() -> void:
 	pass
