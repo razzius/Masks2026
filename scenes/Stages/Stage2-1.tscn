@@ -47,7 +47,8 @@ position = Vector2(1652, 788)
 is_light = true
 
 [node name="Spotlight" parent="." unique_id=1733791318 groups=["Lights"] instance=ExtResource("3_ephjr")]
-position = Vector2(637, 14)
+z_index = 6
+position = Vector2(660, 61)
 rotation = 3.1415927
 
 [node name="Spotlight2" parent="." unique_id=837350782 instance=ExtResource("3_ephjr")]
