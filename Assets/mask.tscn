@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://g8i7qcfxweg7" path="res://art/maskrotate_0003.png" id="8_dtjkn"]
 [ext_resource type="Texture2D" uid="uid://cljgeimgtuy11" path="res://art/maskrotate_0004.png" id="9_xcesk"]
 [ext_resource type="AudioStream" uid="uid://bhqgcbend47ln" path="res://Assets/HardTap.wav" id="10_yaim1"]
+[ext_resource type="AudioStream" uid="uid://dhgll78v5x2mj" path="res://Assets/Applause_long.wav" id="11_rbq6t"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rv8xw"]
 bounce = 1.0
@@ -68,5 +69,8 @@ frame_progress = 1.0
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1362107024]
 stream = ExtResource("10_yaim1")
 volume_db = -30.0
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=2126285116]
+stream = ExtResource("11_rbq6t")
 
 [connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]
