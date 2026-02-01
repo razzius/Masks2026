@@ -127,7 +127,9 @@
 [ext_resource type="Texture2D" uid="uid://do7dbtbf2txnl" path="res://art/maskcharajumping_0025.png" id="121_24yby"]
 [ext_resource type="Texture2D" uid="uid://dlkj64388if1v" path="res://art/maskcharajumping_0026.png" id="122_dit8h"]
 [ext_resource type="Texture2D" uid="uid://b07g0dc8ne4ed" path="res://art/maskcharajumping_0027.png" id="123_r8i8r"]
+[ext_resource type="Texture2D" uid="uid://bjg4rbvyx8f6t" path="res://art/start.png" id="129_4ijns"]
 [ext_resource type="Texture2D" uid="uid://cyiysshramhut" path="res://art/gitlogolong.png" id="129_c7nvp"]
+[ext_resource type="Texture2D" uid="uid://bbkil0rvlmiyu" path="res://art/startclickedon.png" id="130_ww2ug"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06d2e"]
 animations = [{
@@ -642,3 +644,11 @@ frame_progress = 0.11461993
 [node name="Gitlogolong" type="Sprite2D" parent="." unique_id=987870945]
 position = Vector2(-641, 356)
 texture = ExtResource("129_c7nvp")
+
+[node name="Start" type="Sprite2D" parent="." unique_id=861358710]
+position = Vector2(-934, -12)
+texture = ExtResource("129_4ijns")
+
+[node name="Startclickedon" type="Sprite2D" parent="." unique_id=1058335364]
+position = Vector2(-838, 691)
+texture = ExtResource("130_ww2ug")
