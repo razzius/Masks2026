@@ -1,6 +1,7 @@
 extends Button
 
 @export var gates : Array[Gate] = []
+@export var character : CharacterAnimator
 
 var animSprite : AnimatedSprite2D
 var moving = false
@@ -17,6 +18,7 @@ func _process(delta: float) -> void:
 func _pressed() -> void:
 	if(!moving):
 		moving = true
+		character.PlayThinking()
 		
 		if(leverUp):
 			animSprite.play("slide_down")
