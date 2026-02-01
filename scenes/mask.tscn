@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://duvdnqk8w8yk1" path="res://scenes/mask.gd" id="1_rv8xw"]
 [ext_resource type="Texture2D" uid="uid://bivr2khgssmkh" path="res://art/happymask.png" id="2_0d8jk"]
 [ext_resource type="Script" uid="uid://hd2p4r4nckvh" path="res://scripts/mask_rigid_body_2d.gd" id="2_xsism"]
+[ext_resource type="Script" uid="uid://v82cgyj2q62y" path="res://scenes/sprite_2d.gd" id="4_xsism"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rv8xw"]
 bounce = 1.0
@@ -25,5 +26,6 @@ polygon = PackedVector2Array(0, -107, 118, -89, 105, 0, 84, 58, 51, 92, 0, 108, 
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1437822850]
 texture = ExtResource("2_0d8jk")
+script = ExtResource("4_xsism")
 
 [connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]

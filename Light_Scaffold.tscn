@@ -48,7 +48,7 @@ skew = 0.0022957325
 occluder = SubResource("OccluderPolygon2D_cnvik")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=2076820345]
-position = Vector2(100, -164)
+position = Vector2(54, -261)
 scale = Vector2(12.600062, 11.7890625)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_ge7ko")
