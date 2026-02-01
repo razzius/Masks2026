@@ -53,17 +53,17 @@ grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 pivot_offset_ratio = Vector2(0.5, 0)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer2" unique_id=345670990]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer2" unique_id=1282107602]
 layout_mode = 2
 
-[node name="StartButton" type="Button" parent="CanvasLayer/CenterContainer2/VBoxContainer" unique_id=1344575416]
+[node name="StartButton" type="Button" parent="CanvasLayer/CenterContainer2/HBoxContainer" unique_id=1344575416]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
 icon = ExtResource("4_cs5ya")
 flat = true
 icon_alignment = 1
 
-[node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer2/VBoxContainer" unique_id=947926400]
+[node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer2/HBoxContainer" unique_id=947926400]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
 icon = ExtResource("5_mykxm")
@@ -85,6 +85,6 @@ scale = Vector2(0.5, 0.5)
 animation = &"worried"
 frame_progress = 0.0
 
-[connection signal="button_down" from="CanvasLayer/CenterContainer2/VBoxContainer/StartButton" to="." method="_on_button_button_down"]
-[connection signal="pressed" from="CanvasLayer/CenterContainer2/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/CenterContainer2/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="button_down" from="CanvasLayer/CenterContainer2/HBoxContainer/StartButton" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer2/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer2/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
