@@ -21,7 +21,3 @@ func _on_rigid_body_2d_body_entered(body: Node) -> void:
 			body.queue_free()
 			queue_free()
 			OnMaskMerged.emit()
-	else:
-		## Add random variation to velocity and direction.
-		pass
-	pass
