@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://e625levok1c3" path="res://Assets/Gate.tscn" id="3_swga8"]
 [ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://scenes/mask.tscn" id="3_t8h1r"]
 [ext_resource type="PackedScene" uid="uid://g22m82tlsmfs" path="res://Assets/LightGate.tscn" id="3_uyrid"]
+[ext_resource type="PackedScene" uid="uid://dnwmd3dggw6b7" path="res://Assets/Spotlight.tscn" id="4_t8h1r"]
 [ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="4_uyrid"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="5_4whon"]
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="6_kj7ij"]
@@ -21,16 +22,22 @@ scenes/1/scene = ExtResource("3_swga8")
 resource_name = "LightGate"
 scenes/2/scene = ExtResource("3_uyrid")
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_uyrid"]
+resource_name = "Spotlight"
+scenes/2/scene = ExtResource("4_t8h1r")
+
 [sub_resource type="TileSet" id="TileSet_f1ilw"]
 tile_size = Vector2i(1000, 1000)
 sources/0 = SubResource("TileSetAtlasSource_0ixc1")
 sources/2 = SubResource("TileSetScenesCollectionSource_t8h1r")
 sources/3 = SubResource("TileSetScenesCollectionSource_4whon")
+sources/4 = SubResource("TileSetScenesCollectionSource_uyrid")
 
 [node name="StageN" type="Node2D" unique_id=253650236]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2009943806]
 scale = Vector2(0.1, 0.1)
+tile_map_data = PackedByteArray(0, 0, 6, 0, 7, 0, 4, 0, 0, 0, 0, 0, 2, 0, 15, 0, 4, 0, 3, 0, 0, 0, 0, 0, 2, 0)
 tile_set = SubResource("TileSet_f1ilw")
 
 [node name="Mask" parent="." unique_id=1359150612 instance=ExtResource("3_t8h1r")]
