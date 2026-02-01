@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b8mykqujw35t7" path="res://art/maskrotate_0002.png" id="7_rbq6t"]
 [ext_resource type="Texture2D" uid="uid://g8i7qcfxweg7" path="res://art/maskrotate_0003.png" id="8_dtjkn"]
 [ext_resource type="Texture2D" uid="uid://cljgeimgtuy11" path="res://art/maskrotate_0004.png" id="9_xcesk"]
-[ext_resource type="AudioStream" uid="uid://cunohg0ekub3p" path="res://Assets/Applause.wav" id="10_yaim1"]
+[ext_resource type="AudioStream" uid="uid://dhgll78v5x2mj" path="res://Assets/Applause_long.wav" id="10_yaim1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rv8xw"]
 bounce = 1.0
