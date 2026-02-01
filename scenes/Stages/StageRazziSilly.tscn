@@ -41,18 +41,22 @@ tile_set = SubResource("TileSet_f1ilw")
 
 [node name="HappyMask4" parent="." unique_id=597213715 instance=ExtResource("3_4iubr")]
 position = Vector2(410, 708)
+scale = Vector2(0.6, 0.6)
 is_light = true
 
 [node name="HappyMask5" parent="." unique_id=1359150612 instance=ExtResource("3_4iubr")]
 position = Vector2(367, 379)
+scale = Vector2(0.6, 0.6)
 is_light = true
 
 [node name="HappyMask6" parent="." unique_id=1258491031 instance=ExtResource("3_4iubr")]
 position = Vector2(634, 815)
+scale = Vector2(0.6, 0.6)
 is_light = true
 
 [node name="HappyMask" parent="." unique_id=1603429592 instance=ExtResource("3_4iubr")]
 position = Vector2(1521, 278)
+scale = Vector2(0.6, 0.6)
 
 [node name="UI" parent="." unique_id=1760316433 instance=ExtResource("4_530dd")]
 
@@ -60,19 +64,19 @@ position = Vector2(1521, 278)
 position = Vector2(100, 930)
 
 [node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
-gates = [NodePath("../../../Gate")]
+gates = [NodePath("../../../Gate"), NodePath("../../../Gate2")]
 
 [node name="Lever2" parent="UI" index="2" unique_id=2042641525]
 position = Vector2(250, 930)
 
 [node name="Button" parent="UI/Lever2" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
-gates = [NodePath("../../../Gate2")]
+gates = [NodePath("../../../Gate2"), NodePath("../../../Gate3")]
 
 [node name="Lever3" parent="UI" index="3" unique_id=888916594]
 position = Vector2(400, 930)
 
 [node name="Button" parent="UI/Lever3" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
-gates = [NodePath("../../../Gate3")]
+gates = [NodePath("../../../Gate3"), NodePath("../../../Gate"), NodePath("../../../Gate4")]
 
 [node name="Banner" type="Sprite2D" parent="." unique_id=501511650]
 position = Vector2(461, 113)
@@ -90,14 +94,20 @@ metadata/_edit_lock_ = true
 
 [node name="HappyMask3" parent="." unique_id=350842807 instance=ExtResource("3_4iubr")]
 position = Vector2(1670, 812)
+scale = Vector2(0.6, 0.6)
 
 [node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("3_4iubr")]
 position = Vector2(1693, 546)
+scale = Vector2(0.6, 0.6)
 
 [node name="Gate3" parent="." unique_id=217292425 instance=ExtResource("1_qqewv")]
-position = Vector2(1064, 723.00006)
+position = Vector2(1087, 758)
 rotation = 1.5812683
 scale = Vector2(1, 1)
+
+[node name="Gate4" parent="." unique_id=1409523363 instance=ExtResource("1_qqewv")]
+position = Vector2(1473, 705)
+scale = Vector2(0.561001, 1)
 
 [editable path="UI"]
 [editable path="UI/Lever"]
