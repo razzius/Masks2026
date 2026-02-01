@@ -31,7 +31,12 @@ func complete_level() -> void:
 
 # Advance to the next level.
 func advance_level() -> void:
-	change_scene(levels[current_level])
+	if current_level < levels.size():
+		change_scene(levels[current_level])
+		current_level += 1
+	else:
+		change_scene('res://scenes/title_screen.tscn')
+		current_level = 0
 
 # Change to the scene at the given path.
 func change_scene(scene) -> void:
