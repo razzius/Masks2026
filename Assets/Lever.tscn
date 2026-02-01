@@ -3,16 +3,64 @@
 [ext_resource type="Script" uid="uid://cscr4vo7drgmp" path="res://scripts/Lever.gd" id="1_b1op8"]
 [ext_resource type="Texture2D" uid="uid://fsvnojxpmgp1" path="res://art/leverpull_0000.png" id="1_pidrf"]
 [ext_resource type="Texture2D" uid="uid://cia6xxho2g8uk" path="res://art/leverpull_0002.png" id="2_c6jo7"]
+[ext_resource type="Texture2D" uid="uid://pmabrvie0dyj" path="res://art/lever_0001.png" id="2_carq2"]
+[ext_resource type="Texture2D" uid="uid://bbni44l4eb2ry" path="res://art/lever_0000.png" id="2_pix2u"]
 [ext_resource type="Texture2D" uid="uid://bb5afj5svaeob" path="res://art/leverpull_0001.png" id="2_t10pe"]
+[ext_resource type="Texture2D" uid="uid://db6hs1tnmoh3u" path="res://art/lever_0002.png" id="3_n3x1g"]
 [ext_resource type="Texture2D" uid="uid://d287kbal16s18" path="res://art/leverpull_0003.png" id="3_pidrf"]
 [ext_resource type="Texture2D" uid="uid://cmdkux4lytgqt" path="res://art/leverpull_0004.png" id="4_t10pe"]
+[ext_resource type="Texture2D" uid="uid://d14geraoi5giv" path="res://art/lever_0003.png" id="4_w1tio"]
+[ext_resource type="Texture2D" uid="uid://bm048feeun7jo" path="res://art/lever_0004.png" id="5_1ces3"]
+[ext_resource type="Texture2D" uid="uid://bie7q8e5ehqai" path="res://art/lever_0005.png" id="6_q6b71"]
+[ext_resource type="Texture2D" uid="uid://bnp46gd81cvon" path="res://art/lever_0006.png" id="7_2h7m4"]
+[ext_resource type="Texture2D" uid="uid://dlcm83n7bg8sn" path="res://art/lever_0007.png" id="8_efsjd"]
+[ext_resource type="Texture2D" uid="uid://bgyobaujwfnxw" path="res://art/lever_0008.png" id="9_d1ie1"]
+[ext_resource type="Texture2D" uid="uid://cqldlvmk10paq" path="res://art/lever_0009.png" id="10_70hwp"]
+[ext_resource type="Texture2D" uid="uid://loiml73j6kl" path="res://art/lever_0010.png" id="11_xb3x0"]
+[ext_resource type="Texture2D" uid="uid://g33ujnaq56n0" path="res://art/lever_0011.png" id="12_stsru"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vgmdg"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pix2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_carq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n3x1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w1tio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1ces3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q6b71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2h7m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_efsjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d1ie1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_70hwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xb3x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_stsru")
+}],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"idle",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -30,9 +78,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_t10pe")
 }],
-"loop": true,
+"loop": false,
 "name": &"slide_down",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [node name="Lever" type="AnimatedSprite2D" unique_id=864645570]
