@@ -25,6 +25,9 @@ func DeleteSprite() -> void:
 
 # Mask collided with something.
 func _on_rigid_body_2d_body_entered(body: Node) -> void:
+	if body.get_parent() as Spotlight:
+		if not is_light:
+			$RigidBody2D.linear_velocity = Vector2(0,0)
 	if body.get_parent() as Mask:
 		if body.get_parent().is_light != is_light:			## Merge occured.
 			if is_light:
