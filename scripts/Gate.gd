@@ -1,16 +1,15 @@
 extends Node
 class_name Gate
 
-@export var openTex : Texture
-@export var closeTex : Texture
-
 @export var opened : bool
-var sprite : Sprite2D
+var closedSprite : Sprite2D
+var openSprite : Sprite2D
 var collider
 
 
 func _ready() -> void:
-	sprite = get_child(0)
+	closedSprite = $ClosedSprite2D
+	openSprite = $OpenSprite2D
 	collider = $StaticBody2D/CollisionShape2D
 	
 	if(opened):
@@ -18,16 +17,15 @@ func _ready() -> void:
 	else:
 		CloseDoor()
 
-func _process(delta: float) -> void:
-	pass
-
 func OpenDoor() -> void:
-	sprite.texture = openTex
+	closedSprite.visible = false
+	openSprite.visible = true
 	collider.disabled = true
 	opened = true
 	
 func CloseDoor() -> void:
-	sprite.texture = closeTex
+	closedSprite.visible = true
+	openSprite.visible = false
 	collider.disabled = false
 	opened = false
 	
@@ -36,7 +34,3 @@ func ToggleDoor() -> void:
 		CloseDoor()
 	else:
 		OpenDoor()
-
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	print('area entered!')
