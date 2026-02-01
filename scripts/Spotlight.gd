@@ -1,4 +1,5 @@
 extends Node
+class_name Spotlight
 
 var occluder
 
@@ -6,10 +7,6 @@ var occluder
 func _ready() -> void:
 	occluder = $LightOccluder2D
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	occluder.rotation += 0.01
-	if occluder.rotation >= 180:
-		occluder.rotation = 0.0
 	pass

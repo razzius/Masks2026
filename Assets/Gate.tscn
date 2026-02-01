@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cec7ij6pe2i3c" path="res://scripts/Gate.gd" id="1_x6m3a"]
 [ext_resource type="Texture2D" uid="uid://coe2javbsfrvj" path="res://art/closeddoor_0000.png" id="2_gvlo7"]
 [ext_resource type="Texture2D" uid="uid://c0yst0ko6krfb" path="res://art/door_0000.png" id="2_x6m3a"]
+[ext_resource type="AudioStream" uid="uid://b1xq8sl3q3sh" path="res://Assets/Gate.wav" id="4_x8q4l"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvlo7"]
 friction = 0.0
@@ -28,3 +29,6 @@ physics_material_override = SubResource("PhysicsMaterial_gvlo7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=922041905]
 scale = Vector2(8, 26)
 shape = SubResource("RectangleShape2D_x6m3a")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=961479339]
+stream = ExtResource("4_x8q4l")

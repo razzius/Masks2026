@@ -1,56 +1,44 @@
 [gd_scene format=3 uid="uid://dnwmd3dggw6b7"]
 
 [ext_resource type="Script" uid="uid://bsdg2c5d2thf5" path="res://scripts/Spotlight.gd" id="1_5hp4p"]
-[ext_resource type="Texture2D" uid="uid://coe2javbsfrvj" path="res://art/closeddoor_0000.png" id="3_pfc24"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gvlo7"]
-friction = 0.0
-bounce = 1.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6m3a"]
-
-[sub_resource type="Gradient" id="Gradient_c4q5b"]
-offsets = PackedFloat32Array(0.70481926, 0.8674699)
+[sub_resource type="Gradient" id="Gradient_nxaxs"]
+offsets = PackedFloat32Array(0.6204819, 0.7710843)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ea576"]
-gradient = SubResource("Gradient_c4q5b")
-fill_from = Vector2(0.51304346, 0)
-fill_to = Vector2(0.53913045, 1)
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5hp4p"]
+gradient = SubResource("Gradient_nxaxs")
+fill_from = Vector2(0.47826087, 0)
+fill_to = Vector2(0.4869565, 1)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5hp4p"]
-polygon = PackedVector2Array(-10, -10, 10, -10, 10, -20, -10, -20)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_amtbn"]
+polygon = PackedVector2Array(-3, -5, 0, 5, 3, -5, 1, -5, 0, 1, -1, -5)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0myk1"]
-polygon = PackedVector2Array(-21.5, 15.5, -20, -45, 19, -45.5, 20, 15, 13.5, 15, 14, -38.5, -13, -38.5, -13.5, 15)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nxaxs"]
+a = Vector2(0, 1)
+b = Vector2(0, -640)
 
 [node name="Spotlight" type="Node2D" unique_id=1733791318]
 scale = Vector2(2, 2)
 script = ExtResource("1_5hp4p")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=540055640]
-position = Vector2(58.5, 34)
-texture = ExtResource("3_pfc24")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=44474892]
-position = Vector2(58.5, 34)
-physics_material_override = SubResource("PhysicsMaterial_gvlo7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=922041905]
-scale = Vector2(8, 26)
-shape = SubResource("RectangleShape2D_x6m3a")
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=791430710]
-position = Vector2(0, -20)
-scale = Vector2(6, 180.018)
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1721302161]
 shadow_enabled = true
-texture = SubResource("GradientTexture2D_ea576")
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_5hp4p")
+texture_scale = 10.0
 
-[node name="Occluder" type="Node2D" parent="." unique_id=1301412928]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1288228133]
+occluder = SubResource("OccluderPolygon2D_amtbn")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Occluder" unique_id=1725231411]
-occluder = SubResource("OccluderPolygon2D_5hp4p")
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=506042492]
+collision_layer = 2
+collision_mask = 2
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1790763401]
-modulate = Color(1, 1, 1, 0.007843138)
-occluder = SubResource("OccluderPolygon2D_0myk1")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1253557471]
+polygon = PackedVector2Array(0, 1, -110, -640, 110, -640)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=796207022]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=754995444]
+shape = SubResource("SegmentShape2D_nxaxs")

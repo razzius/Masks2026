@@ -2,12 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="2_swga8"]
 [ext_resource type="PackedScene" uid="uid://e625levok1c3" path="res://Assets/Gate.tscn" id="3_swga8"]
-[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://scenes/mask.tscn" id="3_t8h1r"]
+[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://Assets/mask.tscn" id="3_t8h1r"]
 [ext_resource type="PackedScene" uid="uid://g22m82tlsmfs" path="res://Assets/LightGate.tscn" id="3_uyrid"]
 [ext_resource type="PackedScene" uid="uid://dnwmd3dggw6b7" path="res://Assets/Spotlight.tscn" id="4_t8h1r"]
 [ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="4_uyrid"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="5_4whon"]
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="6_kj7ij"]
+[ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="9_uyrid"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ixc1"]
 texture = ExtResource("2_swga8")
@@ -40,9 +41,6 @@ scale = Vector2(0.1, 0.1)
 tile_map_data = PackedByteArray(0, 0, 6, 0, 7, 0, 4, 0, 0, 0, 0, 0, 2, 0, 15, 0, 4, 0, 3, 0, 0, 0, 0, 0, 2, 0)
 tile_set = SubResource("TileSet_f1ilw")
 
-[node name="Mask" parent="." unique_id=1359150612 instance=ExtResource("3_t8h1r")]
-position = Vector2(648, 420)
-
 [node name="UI" parent="." unique_id=1760316433 instance=ExtResource("4_uyrid")]
 
 [node name="Lever" parent="UI" index="1" unique_id=901851183]
@@ -69,6 +67,13 @@ texture = ExtResource("5_4whon")
 z_index = -999
 position = Vector2(967, 554)
 texture = ExtResource("6_kj7ij")
+
+[node name="Mask" parent="." unique_id=1359150612 instance=ExtResource("3_t8h1r")]
+position = Vector2(291, 399)
+
+[node name="Stagehand" parent="." unique_id=477236684 instance=ExtResource("9_uyrid")]
+position = Vector2(1788, 858)
+scale = Vector2(0.5, 0.5)
 
 [editable path="UI"]
 [editable path="UI/Lever"]

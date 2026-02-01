@@ -25,7 +25,7 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_16pka")
 sources/0 = SubResource("TileSetAtlasSource_16pka")
 
-[node name="Stage1" type="Node2D" unique_id=253650236]
+[node name="Stage" type="Node2D" unique_id=253650236]
 
 [node name="Gate2" parent="." unique_id=1733791318 instance=ExtResource("1_883bo")]
 position = Vector2(1214, 555)

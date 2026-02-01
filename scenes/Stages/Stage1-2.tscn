@@ -1,20 +1,20 @@
-[gd_scene format=4 uid="uid://dl4umw8ju0q36"]
+[gd_scene format=4 uid="uid://cpgvrjx4h5ov"]
 
-[ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="2_16pka"]
-[ext_resource type="PackedScene" uid="uid://e625levok1c3" path="res://Assets/Gate.tscn" id="2_oqog7"]
-[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://Assets/mask.tscn" id="3_q4r7y"]
-[ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="4_bl4ac"]
-[ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="5_50gbc"]
-[ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="6_16pka"]
-[ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="7_f1ilw"]
-[ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="8_5cmav"]
+[ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="2_7j64c"]
+[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://Assets/mask.tscn" id="3_qk3sh"]
+[ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="4_f7qqc"]
+[ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="5_l6j1n"]
+[ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="6_j5fup"]
+[ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="7_k0ya1"]
+[ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="8_bdbed"]
+[ext_resource type="PackedScene" uid="uid://dnwmd3dggw6b7" path="res://Assets/Spotlight.tscn" id="8_xahyl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_16pka"]
 friction = 0.0
 bounce = 1.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_16pka"]
-texture = ExtResource("2_16pka")
+texture = ExtResource("2_7j64c")
 texture_region_size = Vector2i(1000, 1000)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-500, -500, 500, -500, 500, 500, -500, 500)
@@ -27,31 +27,31 @@ sources/0 = SubResource("TileSetAtlasSource_16pka")
 
 [node name="Stage" type="Node2D" unique_id=253650236]
 
-[node name="Gate" parent="." unique_id=1733791318 instance=ExtResource("2_oqog7")]
-position = Vector2(961, 533)
-scale = Vector2(0.75, 1)
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2009943806]
 scale = Vector2(0.1, 0.1)
 tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAABAAkAAAAAAAAAAAABAAgAAAAAAAAAAAABAAcAAAAAAAAAAAABAAYAAAAAAAAAAAABAAUAAAAAAAAAAAABAAQAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAAAAAAAAASAAAAAAAAAAAAAAATAAAAAAAAAAAAAAASAAEAAAAAAAAAAAASAAIAAAAAAAAAAAASAAMAAAAAAAAAAAASAAQAAAAAAAAAAAASAAUAAAAAAAAAAAASAAYAAAAAAAAAAAASAAcAAAAAAAAAAAASAAgAAAAAAAAAAAASAAkAAAAAAAAAAAASAAoAAAAAAAAAAAATAAoAAAAAAAAAAAATAAkAAAAAAAAAAAATAAgAAAAAAAAAAAATAAcAAAAAAAAAAAATAAYAAAAAAAAAAAATAAUAAAAAAAAAAAATAAQAAAAAAAAAAAATAAMAAAAAAAAAAAATAAIAAAAAAAAAAAATAAEAAAAAAAAAAAACAAoAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAARAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAADAAoAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAARAAEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_f1ilw")
 
-[node name="HappyMask" parent="." unique_id=1359150612 instance=ExtResource("3_q4r7y")]
+[node name="HappyMask" parent="." unique_id=1359150612 instance=ExtResource("3_qk3sh")]
 position = Vector2(604, 397)
 is_light = true
 
-[node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("3_q4r7y")]
+[node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("3_qk3sh")]
 position = Vector2(1208, 794)
 
-[node name="Curtains" parent="." unique_id=575676599 instance=ExtResource("7_f1ilw")]
+[node name="Spotlight" parent="." unique_id=1733791318 instance=ExtResource("8_xahyl")]
+position = Vector2(966, 264)
+rotation = 3.1415927
 
-[node name="UI" parent="." unique_id=1760316433 instance=ExtResource("4_bl4ac")]
+[node name="Curtains" parent="." unique_id=575676599 instance=ExtResource("4_f7qqc")]
+
+[node name="UI" parent="." unique_id=1760316433 instance=ExtResource("5_l6j1n")]
 
 [node name="Lever" parent="UI" index="1" unique_id=901851183]
 position = Vector2(100, 930)
 
 [node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
-gates = [NodePath("../../../Gate")]
+gates = [null]
 
 [node name="Lever2" parent="UI" index="2" unique_id=2042641525]
 position = Vector2(250, 930)
@@ -61,18 +61,18 @@ position = Vector2(400, 930)
 
 [node name="Banner" type="Sprite2D" parent="." unique_id=501511650]
 position = Vector2(461, 113)
-texture = ExtResource("5_50gbc")
+texture = ExtResource("6_j5fup")
 
 [node name="Banner" type="Sprite2D" parent="Banner" unique_id=1633536954]
 position = Vector2(1000, -2)
-texture = ExtResource("5_50gbc")
+texture = ExtResource("6_j5fup")
 
 [node name="Theatre" type="Sprite2D" parent="." unique_id=588841874]
 z_index = -999
 position = Vector2(967, 554)
-texture = ExtResource("6_16pka")
+texture = ExtResource("7_k0ya1")
 
-[node name="Stagehand" parent="." unique_id=477236684 instance=ExtResource("8_5cmav")]
+[node name="Stagehand" parent="." unique_id=477236684 instance=ExtResource("8_bdbed")]
 position = Vector2(1788, 858)
 scale = Vector2(0.5, 0.5)
 

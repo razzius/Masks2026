@@ -4,12 +4,14 @@ class_name Gate
 @export var opened : bool
 var closedSprite : Sprite2D
 var openSprite : Sprite2D
+var sound : AudioStreamPlayer2D
 var collider
 
 
 func _ready() -> void:
 	closedSprite = $ClosedSprite2D
 	openSprite = $OpenSprite2D
+	sound = $AudioStreamPlayer2D
 	collider = $StaticBody2D/CollisionShape2D
 	
 	if(opened):
@@ -34,3 +36,4 @@ func ToggleDoor() -> void:
 		CloseDoor()
 	else:
 		OpenDoor()
+	sound.play()
