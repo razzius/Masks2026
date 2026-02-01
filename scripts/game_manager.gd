@@ -16,22 +16,23 @@ func check_level_complete() -> void:
 	print("Checking level started")
 	var masks = get_tree().get_nodes_in_group("Masks")
 	if(masks.all(func(element): return element.deleted)):
-		complete_level()
-		
+		complete_level(false)
 
-func complete_level() -> void:
+func complete_level(exit_to_menu: bool) -> void:
 	## Todo: Play win animation
 	var curtains
 	if current_level == 0:
 		curtains = current_scene.get_node('CanvasLayer/Curtains')
 	else:
 		curtains = current_scene.get_node('Curtains')
+	if (exit_to_menu):
+		current_level = -1
 	curtains.animation_finished.connect(advance_level)
 	curtains.close()
 
 # Advance to the next level.
 func advance_level() -> void:
-	if current_level < levels.size():
+	if current_level >= 0 && current_level < levels.size():
 		change_scene(levels[current_level])
 		current_level += 1
 	else:
@@ -59,7 +60,7 @@ func start_scene() -> void:
 
 func exit_to_menu() -> void:
 	if current_scene.name != 'TitleScreen':
-		change_scene('res://scenes/title_screen.tscn')
+		complete_level(true)
 
 # Exit the game
 func exit_game() -> void:
