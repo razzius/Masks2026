@@ -1,39 +1,56 @@
 [gd_scene format=3 uid="uid://cyootegidemij"]
 
 [ext_resource type="Script" uid="uid://0ljlbghyicvi" path="res://scripts/title_screen.gd" id="1_fgkus"]
+[ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="2_sa3yf"]
 
 [node name="TitleScreen" type="Node2D" unique_id=736705505]
 script = ExtResource("1_fgkus")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=940166042]
+texture = ExtResource("2_sa3yf")
+centered = false
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1926053750]
 follow_viewport_enabled = true
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=308644519]
+[node name="CenterContainer1" type="CenterContainer" parent="CanvasLayer" unique_id=221362257]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 233.0
+offset_bottom = 373.0
+grow_horizontal = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/CenterContainer1" unique_id=248441076]
+layout_mode = 2
+theme_override_font_sizes/font_size = 102
+text = "What Should We Call This Game?"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer" unique_id=308644519]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -33.0
-offset_right = 23.0
-offset_bottom = 33.0
+offset_left = -70.0
+offset_top = 185.0
+offset_right = 70.0
+offset_bottom = 359.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer" unique_id=345670990]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer2" unique_id=345670990]
 layout_mode = 2
 
-[node name="StartButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1344575416]
+[node name="StartButton" type="Button" parent="CanvasLayer/CenterContainer2/VBoxContainer" unique_id=1344575416]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
 text = "Start"
 
-[node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=947926400]
+[node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer2/VBoxContainer" unique_id=947926400]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
 text = "Quit"
 
-[connection signal="button_down" from="CanvasLayer/CenterContainer/VBoxContainer/StartButton" to="." method="_on_button_button_down"]
-[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="button_down" from="CanvasLayer/CenterContainer2/VBoxContainer/StartButton" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer2/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer2/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
