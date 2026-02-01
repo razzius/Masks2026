@@ -8,6 +8,8 @@ var animSprite : AnimatedSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if is_light:
+		$RigidBody2D.set_collision_mask_value(2, true)
 	animSprite = $AnimatedSprite2D
 	animSprite.visible = false
 	animSprite.animation_finished.connect(DeleteSprite)
