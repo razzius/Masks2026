@@ -51,6 +51,10 @@ func _on_rigid_body_2d_body_entered(body: Node) -> void:
 	if body.get_parent() as Mask:
 		if body.get_parent().is_light != is_light:			## Merge occured.
 			if is_light:
+				var new_x = ($RigidBody2D.global_position.x + body.global_position.x) / 2
+				var new_y = ($RigidBody2D.global_position.y + body.global_position.y) / 2
+				var new_position = Vector2(new_x, new_y)
+				animSprite.global_position = new_position
 				animSprite.visible = true
 				animSprite.play("merge")
 			deleted = true
