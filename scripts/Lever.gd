@@ -1,6 +1,7 @@
 extends Button
 
 @export var gates : Array[Gate] = []
+@export var lights : Array[Spotlight] = []
 
 var animSprite : AnimatedSprite2D
 var character : CharacterAnimator
@@ -34,9 +35,14 @@ func _pressed() -> void:
 func ChangeDoors() -> void:
 	for gate in gates:
 		gate.ToggleDoor()
+		
+func ChangeLights() -> void:
+	for light in lights:
+		light.ToggleLight()
 
 func OnAnimationFinished() -> void:
 	moving = false
 	ChangeDoors()
+	ChangeLights()
 	if leverUp:
 		animSprite.play("idle")
