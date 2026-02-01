@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="2_qhnut"]
 [ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://Assets/mask.tscn" id="3_l46ht"]
 [ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="4_1clf4"]
+[ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="4_qhnut"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="5_dsjlv"]
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="6_212pt"]
 
@@ -47,6 +48,14 @@ is_light = true
 position = Vector2(279, 410)
 is_light = true
 
+[node name="HappyMask3" parent="." unique_id=350842807 instance=ExtResource("3_l46ht")]
+position = Vector2(1670, 812)
+
+[node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("3_l46ht")]
+position = Vector2(1693, 546)
+
+[node name="Curtains" parent="." unique_id=575676599 instance=ExtResource("4_qhnut")]
+
 [node name="UI" parent="." unique_id=1760316433 instance=ExtResource("4_1clf4")]
 
 [node name="Lever" parent="UI" index="1" unique_id=901851183]
@@ -74,12 +83,6 @@ z_index = -999
 position = Vector2(967, 554)
 texture = ExtResource("6_212pt")
 metadata/_edit_lock_ = true
-
-[node name="HappyMask3" parent="." unique_id=350842807 instance=ExtResource("3_l46ht")]
-position = Vector2(1670, 812)
-
-[node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("3_l46ht")]
-position = Vector2(1693, 546)
 
 [editable path="UI"]
 [editable path="UI/Lever"]
