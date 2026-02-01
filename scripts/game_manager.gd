@@ -18,9 +18,8 @@ func check_level_complete() -> void:
 		
 
 func complete_level() -> void:
-	pass
 	## Play win animation
-	## Close curtains
+	current_scene.get_node('Curtains').close()
 	## Switch scene
 
 # Change to the scene at the given path.

@@ -3,9 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="2_16pka"]
 [ext_resource type="PackedScene" uid="uid://e625levok1c3" path="res://Assets/Gate.tscn" id="2_oqog7"]
 [ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://Assets/mask.tscn" id="3_q4r7y"]
-[ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="4_bl4ac"]
+[ext_resource type="PackedScene" path="res://scenes/UI.tscn" id="4_bl4ac"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="5_50gbc"]
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="6_16pka"]
+[ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="7_f1ilw"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_16pka"]
 friction = 0.0
@@ -38,6 +39,11 @@ tile_set = SubResource("TileSet_f1ilw")
 position = Vector2(604, 397)
 is_light = true
 
+[node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("3_q4r7y")]
+position = Vector2(1208, 794)
+
+[node name="Curtains" parent="." unique_id=575676599 instance=ExtResource("7_f1ilw")]
+
 [node name="UI" parent="." unique_id=1760316433 instance=ExtResource("4_bl4ac")]
 
 [node name="Lever" parent="UI" index="1" unique_id=901851183]
@@ -64,9 +70,6 @@ texture = ExtResource("5_50gbc")
 z_index = -999
 position = Vector2(967, 554)
 texture = ExtResource("6_16pka")
-
-[node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("3_q4r7y")]
-position = Vector2(1208, 794)
 
 [editable path="UI"]
 [editable path="UI/Lever"]

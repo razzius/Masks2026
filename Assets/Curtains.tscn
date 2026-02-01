@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://3a1ubo7q7168"]
+
+[ext_resource type="Texture2D" uid="uid://bfljy8tp7dl1a" path="res://art/curtainclose_0000.png" id="1_i0a7g"]
+[ext_resource type="Texture2D" uid="uid://bqpby5h61tk0s" path="res://art/curtainclose_0001.png" id="2_dmk5y"]
+[ext_resource type="Texture2D" uid="uid://dsg4oqeo4ipt8" path="res://art/curtainclose_0002.png" id="3_ux56k"]
+[ext_resource type="Texture2D" uid="uid://fl6udxjts0n7" path="res://art/curtainclose_0003.png" id="4_o12a2"]
+[ext_resource type="Script" uid="uid://blofueisepc12" path="res://scripts/curtains.gd" id="5_dmk5y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tl8fl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i0a7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dmk5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ux56k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o12a2")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_o12a2")
+}],
+"loop": true,
+"name": &"stay_closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i0a7g")
+}],
+"loop": true,
+"name": &"stay_open",
+"speed": 5.0
+}]
+
+[node name="Curtains" type="AnimatedSprite2D" unique_id=575676599]
+sprite_frames = SubResource("SpriteFrames_tl8fl")
+animation = &"stay_open"
+centered = false
+script = ExtResource("5_dmk5y")
