@@ -50,9 +50,13 @@
 [ext_resource type="Texture2D" uid="uid://bb5afj5svaeob" path="res://art/leverpull_0001.png" id="23_vc1yq"]
 [ext_resource type="Texture2D" uid="uid://cia6xxho2g8uk" path="res://art/leverpull_0002.png" id="24_yecrt"]
 [ext_resource type="Texture2D" uid="uid://d287kbal16s18" path="res://art/leverpull_0003.png" id="25_1sg8o"]
+[ext_resource type="Texture2D" uid="uid://bfljy8tp7dl1a" path="res://art/curtainclose_0000.png" id="26_1mu8i"]
 [ext_resource type="Texture2D" uid="uid://cmdkux4lytgqt" path="res://art/leverpull_0004.png" id="26_uljna"]
+[ext_resource type="Texture2D" uid="uid://bqpby5h61tk0s" path="res://art/curtainclose_0001.png" id="27_7ordp"]
 [ext_resource type="Texture2D" uid="uid://145fnitpvrm2" path="res://art/maskcharacterthinking_0000.png" id="27_jhdna"]
+[ext_resource type="Texture2D" uid="uid://dsg4oqeo4ipt8" path="res://art/curtainclose_0002.png" id="28_2lnrt"]
 [ext_resource type="Texture2D" uid="uid://bpx0v2ghis8pt" path="res://art/maskcharacterthinking_0001.png" id="28_7xut0"]
+[ext_resource type="Texture2D" uid="uid://fl6udxjts0n7" path="res://art/curtainclose_0003.png" id="29_72io6"]
 [ext_resource type="Texture2D" uid="uid://obi0ku1btue4" path="res://art/maskcharacterthinking_0002.png" id="29_ipswj"]
 [ext_resource type="Texture2D" uid="uid://fshfto8bd6om" path="res://art/maskcharacterthinking_0003.png" id="30_2hktu"]
 [ext_resource type="Texture2D" uid="uid://c41v2j4ef1nfx" path="res://art/maskcharacterthinking_0004.png" id="31_k8erb"]
@@ -85,6 +89,11 @@
 [ext_resource type="Texture2D" uid="uid://dkvoatpx12jrv" path="res://art/greenleverpull_0003.png" id="48_k6cly"]
 [ext_resource type="Texture2D" uid="uid://5mwkr4slkp5e" path="res://art/greenleverpull_0004.png" id="49_a17xy"]
 [ext_resource type="Texture2D" uid="uid://dqhgrx7q8i0b8" path="res://art/greenleverpull_0005.png" id="50_fvk6o"]
+[ext_resource type="Texture2D" uid="uid://b8cn07jhphvmy" path="res://art/maskrotate_0000.png" id="90_gno8j"]
+[ext_resource type="Texture2D" uid="uid://ck83li11ph41r" path="res://art/maskrotate_0001.png" id="91_wtyva"]
+[ext_resource type="Texture2D" uid="uid://b8mykqujw35t7" path="res://art/maskrotate_0002.png" id="92_uil72"]
+[ext_resource type="Texture2D" uid="uid://g8i7qcfxweg7" path="res://art/maskrotate_0003.png" id="93_rwkp1"]
+[ext_resource type="Texture2D" uid="uid://cljgeimgtuy11" path="res://art/maskrotate_0004.png" id="94_f81t4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06d2e"]
 animations = [{
@@ -176,6 +185,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"closeddoor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_1mu8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_7ordp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_2lnrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_72io6")
+}],
+"loop": true,
+"name": &"curtainclose",
 "speed": 5.0
 }, {
 "frames": [{
@@ -392,6 +418,26 @@ animations = [{
 "loop": true,
 "name": &"maskcharacterworried",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("90_gno8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_wtyva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_uil72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_rwkp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_f81t4")
+}],
+"loop": true,
+"name": &"maskrotate",
+"speed": 6.0
 }]
 
 [node name="LyricScene" type="Node2D" unique_id=901075329]
@@ -399,5 +445,6 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1567105321]
 position = Vector2(-195, 3)
 sprite_frames = SubResource("SpriteFrames_06d2e")
-animation = &"maskcharacterworried"
-frame_progress = 0.24268568
+animation = &"maskrotate"
+frame = 2
+frame_progress = 0.7712658
