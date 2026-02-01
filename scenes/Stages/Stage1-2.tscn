@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://Assets/mask.tscn" id="3_qk3sh"]
 [ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="4_f7qqc"]
 [ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="5_l6j1n"]
+[ext_resource type="Script" uid="uid://cuq3b4chp3t4r" path="res://scripts/LightLever.gd" id="6_7j64c"]
 [ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="6_j5fup"]
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="7_k0ya1"]
 [ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="8_bdbed"]
@@ -39,7 +40,7 @@ is_light = true
 [node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("3_qk3sh")]
 position = Vector2(1208, 794)
 
-[node name="Spotlight" parent="." unique_id=1733791318 instance=ExtResource("8_xahyl")]
+[node name="Spotlight" parent="." unique_id=1733791318 groups=["Lights"] instance=ExtResource("8_xahyl")]
 position = Vector2(966, 264)
 rotation = 3.1415927
 
@@ -58,6 +59,9 @@ position = Vector2(250, 930)
 
 [node name="Lever3" parent="UI" index="3" unique_id=888916594]
 position = Vector2(400, 930)
+
+[node name="Button" parent="UI/Lever3" index="0" unique_id=1926699541]
+script = ExtResource("6_7j64c")
 
 [node name="Banner" type="Sprite2D" parent="." unique_id=501511650]
 position = Vector2(461, 113)
