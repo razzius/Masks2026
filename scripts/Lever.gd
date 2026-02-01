@@ -1,9 +1,10 @@
 extends Button
 
 @export var gates : Array[Gate] = []
-@export var spriteFrames : SpriteFrames
+var spriteFrames : SpriteFrames
 
-var moving : bool
+var moving = false
+var leverUp = true
 
 func _ready() -> void:
 	spriteFrames = get_parent().sprite_frames
@@ -15,8 +16,14 @@ func _pressed() -> void:
 	if(!moving):
 		moving = true
 		ChangeDoors()
-		## Play moving animation.
-		spriteFrames.set_animation_loop("slide_down", false)
+		
+		if(leverUp):
+			get_parent().play("slide_down")
+			leverUp = false
+		else:
+			get_parent().play_backwards("slide_down")
+			leverUp = true
+		
 		moving = false
 		
 

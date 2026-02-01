@@ -30,11 +30,6 @@ sources/0 = SubResource("TileSetAtlasSource_16pka")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_122sm"]
 animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_oysxf")
@@ -51,9 +46,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_hmdnv")
 }],
-"loop": true,
+"loop": false,
 "name": &"slide_down",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [node name="Stage1" type="Node2D" unique_id=253650236]
@@ -75,7 +70,9 @@ position = Vector2(604, 397)
 [node name="Lever" parent="UI" index="1" unique_id=901851183]
 position = Vector2(100, 930)
 sprite_frames = SubResource("SpriteFrames_122sm")
-animation = &"slide_down"
+
+[node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
+gates = [NodePath("../../../Gate")]
 
 [node name="Lever2" parent="UI" index="2" unique_id=2042641525]
 position = Vector2(250, 930)
