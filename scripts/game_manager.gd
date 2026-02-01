@@ -43,6 +43,9 @@ func complete_level(exit_to_menu: bool) -> void:
 		character.PlayVictory()
 	curtains.animation_finished.connect(advance_level)
 	curtains.close()
+	
+func reset_level() -> void:
+	change_scene(levels[current_level-1])
 
 # Advance to the next level.
 func advance_level() -> void:
