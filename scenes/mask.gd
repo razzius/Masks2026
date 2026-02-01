@@ -17,7 +17,8 @@ func _process(delta: float) -> void:
 func _on_rigid_body_2d_body_entered(body: Node) -> void:
 	if body.get_parent() as Mask:
 		if body.get_parent().is_light != is_light:
-			print('coMBIINEINE')
+			body.queue_free()
+			queue_free()
 		#if body.is_light && not is_light:
 			#print("COMBINE!")
 	#$RigidBody2D.linear_velocity.x = -$RigidBody2D.linear_velocity.x
