@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0ljlbghyicvi" path="res://scripts/title_screen.gd" id="1_fgkus"]
 [ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="2_sa3yf"]
+[ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="3_s4lrb"]
 
 [node name="TitleScreen" type="Node2D" unique_id=736705505]
 script = ExtResource("1_fgkus")
@@ -23,7 +24,7 @@ grow_horizontal = 2
 [node name="Title" type="Label" parent="CanvasLayer/CenterContainer1" unique_id=248441076]
 layout_mode = 2
 theme_override_font_sizes/font_size = 102
-text = "What Should We Call This Game?"
+text = "What Should We Call This?"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer" unique_id=308644519]
 anchors_preset = 8
@@ -50,6 +51,8 @@ text = "Start"
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
 text = "Quit"
+
+[node name="Curtains" parent="CanvasLayer" unique_id=575676599 instance=ExtResource("3_s4lrb")]
 
 [connection signal="button_down" from="CanvasLayer/CenterContainer2/VBoxContainer/StartButton" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer2/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

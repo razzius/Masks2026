@@ -1,6 +1,8 @@
 extends Node
 
 var current_scene = null
+var current_level = 0
+var levels = ['res://scenes/Stages/Stage1.tscn']
 
 func _ready() -> void:
 	var root = get_tree().root
@@ -18,13 +20,22 @@ func check_level_complete() -> void:
 		
 
 func complete_level() -> void:
-	## Play win animation
-	current_scene.get_node('Curtains').close()
-	## Switch scene
+	## Todo: Play win animation
+	var curtains
+	if current_level == 0:
+		curtains = current_scene.get_node('CanvasLayer/Curtains')
+	else:
+		curtains = current_scene.get_node('Curtains')
+	curtains.animation_finished.connect(advance_level)
+	curtains.close()
+
+# Advance to the next level.
+func advance_level() -> void:
+	change_scene(levels[current_level])
 
 # Change to the scene at the given path.
-func change_scene(path) -> void:
-	_deferred_change_scene.call_deferred(path)
+func change_scene(scene) -> void:
+	_deferred_change_scene.call_deferred(scene)
 
 func _deferred_change_scene(path):
 	current_scene.free()

@@ -1,7 +1,7 @@
 extends Node2D
 
 func _on_start_button_pressed() -> void:
-	GameManager.change_scene('res://scenes/Stages/Stage1.tscn')
+	GameManager.complete_level()
 
 
 func _on_quit_button_pressed() -> void:
