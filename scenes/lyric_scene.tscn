@@ -128,6 +128,7 @@
 [ext_resource type="Texture2D" uid="uid://do7dbtbf2txnl" path="res://art/maskcharajumping_0025.png" id="121_24yby"]
 [ext_resource type="Texture2D" uid="uid://dlkj64388if1v" path="res://art/maskcharajumping_0026.png" id="122_dit8h"]
 [ext_resource type="Texture2D" uid="uid://b07g0dc8ne4ed" path="res://art/maskcharajumping_0027.png" id="123_r8i8r"]
+[ext_resource type="Texture2D" uid="uid://cyiysshramhut" path="res://art/gitlogolong.png" id="129_c7nvp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06d2e"]
 animations = [{
@@ -630,6 +631,10 @@ animations = [{
 [node name="LyricScene" type="Node2D" unique_id=901075329]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1567105321]
-position = Vector2(-195, 3)
+position = Vector2(-136, -95)
 sprite_frames = SubResource("SpriteFrames_06d2e")
 animation = &"leverpull"
+
+[node name="Gitlogolong" type="Sprite2D" parent="." unique_id=987870945]
+position = Vector2(-641, 356)
+texture = ExtResource("129_c7nvp")
