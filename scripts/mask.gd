@@ -6,6 +6,7 @@ signal OnMaskMerged
 @export var minVelocity : float = 180
 @export var maxVelocity : float = 360
 @export var speedMod : float = 60
+@export var mask_scale : float = 1.0
 
 var deleted = false
 var animSprite : AnimatedSprite2D
@@ -18,6 +19,9 @@ func _ready() -> void:
 	animSprite = $AnimatedSprite2D
 	animSprite.visible = false
 	animSprite.animation_finished.connect(DeleteSprite)
+	$RigidBody2D/CollisionPolygon2D.global_scale = Vector2(mask_scale, mask_scale)
+	$RigidBody2D/Sprite2D.global_scale = Vector2(mask_scale, mask_scale)
+	$AnimatedSprite2D.global_scale = Vector2(mask_scale / 2, mask_scale / 2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
