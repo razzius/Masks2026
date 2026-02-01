@@ -1,0 +1,255 @@
+[gd_scene format=4 uid="uid://1apbb2jgv16r"]
+
+[ext_resource type="PackedScene" uid="uid://e625levok1c3" path="res://Assets/Gate.tscn" id="1_mgfl6"]
+[ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="2_34swy"]
+[ext_resource type="PackedScene" uid="uid://bxkpmfiyt8o2f" path="res://Assets/mask.tscn" id="3_e1bih"]
+[ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="4_dmly7"]
+[ext_resource type="PackedScene" uid="uid://ulgg0vj6aucw" path="res://scenes/UI.tscn" id="5_0tt3r"]
+[ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="6_tqxrf"]
+[ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="7_61qt5"]
+[ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="8_8la6o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_16pka"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_16pka"]
+texture = ExtResource("2_34swy")
+texture_region_size = Vector2i(1000, 1000)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-500, -500, 500, -500, 500, 500, -500, 500)
+
+[sub_resource type="TileSet" id="TileSet_f1ilw"]
+tile_size = Vector2i(1000, 1000)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_16pka")
+sources/0 = SubResource("TileSetAtlasSource_16pka")
+
+[node name="Stage" type="Node2D" unique_id=253650236]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2009943806]
+scale = Vector2(0.1, 0.1)
+tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAABAAkAAAAAAAAAAAABAAgAAAAAAAAAAAABAAcAAAAAAAAAAAABAAYAAAAAAAAAAAABAAUAAAAAAAAAAAABAAQAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAAAAAAAAASAAAAAAAAAAAAAAATAAAAAAAAAAAAAAASAAEAAAAAAAAAAAASAAIAAAAAAAAAAAASAAMAAAAAAAAAAAASAAQAAAAAAAAAAAASAAUAAAAAAAAAAAASAAYAAAAAAAAAAAASAAcAAAAAAAAAAAASAAgAAAAAAAAAAAASAAkAAAAAAAAAAAASAAoAAAAAAAAAAAATAAoAAAAAAAAAAAATAAkAAAAAAAAAAAATAAgAAAAAAAAAAAATAAcAAAAAAAAAAAATAAYAAAAAAAAAAAATAAUAAAAAAAAAAAATAAQAAAAAAAAAAAATAAMAAAAAAAAAAAATAAIAAAAAAAAAAAATAAEAAAAAAAAAAAACAAoAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAARAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAADAAoAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAARAAEAAAAAAAAAAAARAAUAAAAAAAAAAAAQAAUAAAAAAAAAAAAOAAUAAAAAAAAAAAANAAUAAAAAAAAAAAAMAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAADAAUAAAAAAAAAAAACAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAALAAUAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_f1ilw")
+
+[node name="Gate" parent="." unique_id=1733791318 instance=ExtResource("1_mgfl6")]
+position = Vector2(370, 275)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate2" parent="." unique_id=1959229355 instance=ExtResource("1_mgfl6")]
+position = Vector2(370, 415)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate3" parent="." unique_id=68053537 instance=ExtResource("1_mgfl6")]
+position = Vector2(370, 555)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate4" parent="." unique_id=500102332 instance=ExtResource("1_mgfl6")]
+position = Vector2(370, 695)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate5" parent="." unique_id=1755015362 instance=ExtResource("1_mgfl6")]
+position = Vector2(370, 835)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate6" parent="." unique_id=696507715 instance=ExtResource("1_mgfl6")]
+position = Vector2(580, 275)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate7" parent="." unique_id=1288346570 instance=ExtResource("1_mgfl6")]
+position = Vector2(580, 415)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate8" parent="." unique_id=1094234409 instance=ExtResource("1_mgfl6")]
+position = Vector2(580, 555)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate9" parent="." unique_id=279792545 instance=ExtResource("1_mgfl6")]
+position = Vector2(580, 695)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate10" parent="." unique_id=874537892 instance=ExtResource("1_mgfl6")]
+position = Vector2(580, 835)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate11" parent="." unique_id=603432749 instance=ExtResource("1_mgfl6")]
+position = Vector2(790, 275)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate12" parent="." unique_id=2040000555 instance=ExtResource("1_mgfl6")]
+position = Vector2(790, 415)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate13" parent="." unique_id=1484603783 instance=ExtResource("1_mgfl6")]
+position = Vector2(790, 555)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate14" parent="." unique_id=887779565 instance=ExtResource("1_mgfl6")]
+position = Vector2(790, 695)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate15" parent="." unique_id=996265855 instance=ExtResource("1_mgfl6")]
+position = Vector2(790, 835)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate16" parent="." unique_id=1717575110 instance=ExtResource("1_mgfl6")]
+position = Vector2(1000, 275)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate17" parent="." unique_id=1670239111 instance=ExtResource("1_mgfl6")]
+position = Vector2(1000, 415)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate18" parent="." unique_id=1125761489 instance=ExtResource("1_mgfl6")]
+position = Vector2(1000, 555)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate19" parent="." unique_id=557334615 instance=ExtResource("1_mgfl6")]
+position = Vector2(1000, 695)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate20" parent="." unique_id=278441901 instance=ExtResource("1_mgfl6")]
+position = Vector2(1000, 835)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate21" parent="." unique_id=621685359 instance=ExtResource("1_mgfl6")]
+position = Vector2(1210, 275)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate22" parent="." unique_id=699980123 instance=ExtResource("1_mgfl6")]
+position = Vector2(1210, 415)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate23" parent="." unique_id=772186362 instance=ExtResource("1_mgfl6")]
+position = Vector2(1210, 555)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate24" parent="." unique_id=1834832585 instance=ExtResource("1_mgfl6")]
+position = Vector2(1210, 695)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate25" parent="." unique_id=1627882679 instance=ExtResource("1_mgfl6")]
+position = Vector2(1210, 835)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate26" parent="." unique_id=1489831441 instance=ExtResource("1_mgfl6")]
+position = Vector2(1420, 275)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate27" parent="." unique_id=332096867 instance=ExtResource("1_mgfl6")]
+position = Vector2(1420, 415)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate28" parent="." unique_id=1925153996 instance=ExtResource("1_mgfl6")]
+position = Vector2(1420, 555)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate29" parent="." unique_id=1329840425 instance=ExtResource("1_mgfl6")]
+position = Vector2(1420, 695)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate30" parent="." unique_id=2122983403 instance=ExtResource("1_mgfl6")]
+position = Vector2(1420, 835)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate31" parent="." unique_id=348833256 instance=ExtResource("1_mgfl6")]
+position = Vector2(1630, 275)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate32" parent="." unique_id=342885318 instance=ExtResource("1_mgfl6")]
+position = Vector2(1630, 415)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate33" parent="." unique_id=673879893 instance=ExtResource("1_mgfl6")]
+position = Vector2(1630, 555)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate34" parent="." unique_id=222509104 instance=ExtResource("1_mgfl6")]
+position = Vector2(1630, 695)
+scale = Vector2(0.188, 0.25)
+
+[node name="Gate35" parent="." unique_id=552166041 instance=ExtResource("1_mgfl6")]
+position = Vector2(1630, 835)
+scale = Vector2(0.188, 0.25)
+
+[node name="HappyMask" parent="." unique_id=1359150612 instance=ExtResource("3_e1bih")]
+position = Vector2(263, 292)
+mask_scale = 0.25
+
+[node name="HappyMask2" parent="." unique_id=2046026903 instance=ExtResource("3_e1bih")]
+position = Vector2(473, 838)
+mask_scale = 0.25
+
+[node name="HappyMask3" parent="." unique_id=1895990972 instance=ExtResource("3_e1bih")]
+position = Vector2(683, 292)
+mask_scale = 0.25
+
+[node name="HappyMask4" parent="." unique_id=984151470 instance=ExtResource("3_e1bih")]
+position = Vector2(893, 838)
+mask_scale = 0.25
+
+[node name="HappyMask5" parent="." unique_id=765315437 instance=ExtResource("3_e1bih")]
+position = Vector2(1103, 292)
+is_light = true
+mask_scale = 0.25
+
+[node name="HappyMask6" parent="." unique_id=1793669074 instance=ExtResource("3_e1bih")]
+position = Vector2(1313, 838)
+is_light = true
+mask_scale = 0.25
+
+[node name="HappyMask7" parent="." unique_id=142286930 instance=ExtResource("3_e1bih")]
+position = Vector2(1523, 292)
+is_light = true
+mask_scale = 0.25
+
+[node name="HappyMask8" parent="." unique_id=1134933346 instance=ExtResource("3_e1bih")]
+position = Vector2(1733, 838)
+is_light = true
+mask_scale = 0.25
+
+[node name="Curtains" parent="." unique_id=575676599 instance=ExtResource("4_dmly7")]
+visible = false
+
+[node name="UI" parent="." unique_id=1760316433 instance=ExtResource("5_0tt3r")]
+
+[node name="Lever" parent="UI" index="1" unique_id=901851183]
+position = Vector2(100, 930)
+
+[node name="Button" parent="UI/Lever" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
+gates = [NodePath("../../../Gate"), NodePath("../../../Gate2"), NodePath("../../../Gate9"), NodePath("../../../Gate10"), NodePath("../../../Gate29"), NodePath("../../../Gate30"), NodePath("../../../Gate31"), NodePath("../../../Gate32"), NodePath("../../../Gate11"), NodePath("../../../Gate21")]
+
+[node name="Lever2" parent="UI" index="2" unique_id=2042641525]
+position = Vector2(250, 930)
+
+[node name="Button" parent="UI/Lever2" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
+gates = [NodePath("../../../Gate"), NodePath("../../../Gate7"), NodePath("../../../Gate29"), NodePath("../../../Gate35"), NodePath("../../../Gate15"), NodePath("../../../Gate25")]
+
+[node name="Lever3" parent="UI" index="3" unique_id=888916594]
+position = Vector2(400, 930)
+
+[node name="Button" parent="UI/Lever3" index="0" unique_id=1926699541 node_paths=PackedStringArray("gates")]
+gates = [NodePath("../../../Gate5"), NodePath("../../../Gate9"), NodePath("../../../Gate27"), NodePath("../../../Gate31"), NodePath("../../../Gate"), NodePath("../../../Gate7"), NodePath("../../../Gate29"), NodePath("../../../Gate35"), NodePath("../../../Gate18")]
+
+[node name="Banner" type="Sprite2D" parent="." unique_id=501511650]
+visible = false
+position = Vector2(461, 113)
+texture = ExtResource("6_tqxrf")
+
+[node name="Banner" type="Sprite2D" parent="Banner" unique_id=1633536954]
+position = Vector2(1000, -2)
+texture = ExtResource("6_tqxrf")
+
+[node name="Theatre" type="Sprite2D" parent="." unique_id=588841874]
+z_index = -999
+position = Vector2(967, 554)
+texture = ExtResource("7_61qt5")
+
+[node name="Stagehand" parent="." unique_id=477236684 instance=ExtResource("8_8la6o")]
+position = Vector2(1788, 858)
+scale = Vector2(0.5, 0.5)
+
+[editable path="UI"]
+[editable path="UI/Lever"]
+[editable path="UI/Lever2"]
+[editable path="UI/Lever3"]

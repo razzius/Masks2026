@@ -7,7 +7,8 @@ var current_level = 0
 var levels = [
 	'res://scenes/Stages/Stage1.tscn',
 	'res://scenes/Stages/StageRazzi.tscn',
-	'res://scenes/Stages/StageRazziSilly.tscn'
+	'res://scenes/Stages/StageRazziSilly.tscn',
+	'res://scenes/Stages/StageCole.tscn'
 ]
 
 func _ready() -> void:
