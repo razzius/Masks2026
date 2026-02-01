@@ -53,23 +53,29 @@ tile_set = SubResource("TileSet_f1ilw")
 [node name="HappyMask4" parent="." unique_id=597213715 instance=ExtResource("3_4iubr")]
 position = Vector2(410, 708)
 is_light = true
+mask_scale = 0.5
 
 [node name="HappyMask5" parent="." unique_id=1359150612 instance=ExtResource("3_4iubr")]
 position = Vector2(367, 379)
 is_light = true
+mask_scale = 0.5
 
 [node name="HappyMask6" parent="." unique_id=1258491031 instance=ExtResource("3_4iubr")]
 position = Vector2(634, 815)
 is_light = true
+mask_scale = 0.5
 
 [node name="HappyMask" parent="." unique_id=1603429592 instance=ExtResource("3_4iubr")]
-position = Vector2(1521, 278)
+position = Vector2(1521, 280)
+mask_scale = 0.5
 
 [node name="HappyMask3" parent="." unique_id=350842807 instance=ExtResource("3_4iubr")]
 position = Vector2(1670, 812)
+mask_scale = 0.5
 
 [node name="HappyMask2" parent="." unique_id=2042291344 instance=ExtResource("3_4iubr")]
 position = Vector2(1693, 546)
+mask_scale = 0.5
 
 [node name="Curtains" parent="." unique_id=575676599 instance=ExtResource("4_enwga")]
 metadata/_edit_lock_ = true
