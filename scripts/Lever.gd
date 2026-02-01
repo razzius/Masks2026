@@ -17,7 +17,6 @@ func _process(delta: float) -> void:
 func _pressed() -> void:
 	if(!moving):
 		moving = true
-		ChangeDoors()
 		
 		if(leverUp):
 			animSprite.play("slide_down")
@@ -32,3 +31,4 @@ func ChangeDoors() -> void:
 
 func OnAnimationFinished() -> void:
 	moving = false
+	ChangeDoors()
