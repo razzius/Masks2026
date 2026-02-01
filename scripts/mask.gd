@@ -9,11 +9,9 @@ var deleted = false
 func _ready() -> void:
 	pass
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
 
 # Mask collided with something.
 func _on_rigid_body_2d_body_entered(body: Node) -> void:
@@ -23,7 +21,7 @@ func _on_rigid_body_2d_body_entered(body: Node) -> void:
 			body.queue_free()
 			queue_free()
 			OnMaskMerged.emit()
-		#if body.is_light && not is_light:
-			#print("COMBINE!")
-	#$RigidBody2D.linear_velocity.x = -$RigidBody2D.linear_velocity.x
+	else:
+		## Add random variation to velocity and direction.
+		pass
 	pass

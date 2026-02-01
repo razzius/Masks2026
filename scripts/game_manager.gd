@@ -14,8 +14,14 @@ func check_level_complete() -> void:
 	print("Checking level started")
 	var masks = get_tree().get_nodes_in_group("Masks")
 	if(masks.all(func(element): return element.deleted)):
-		print("All deleted")
+		complete_level()
 		
+
+func complete_level() -> void:
+	pass
+	## Play win animation
+	## Close curtains
+	## Switch scene
 
 # Change to the scene at the given path.
 func change_scene(path) -> void:
@@ -30,6 +36,11 @@ func _deferred_change_scene(path):
 	var masks = get_tree().get_nodes_in_group("Masks")
 	for mask in masks:
 		mask.OnMaskMerged.connect(check_level_complete)
+		
+func start_scene() -> void:
+	pass
+	## Connect to mask collision events
+	## Open curtains
 
 func exit_to_menu() -> void:
 	if current_scene.name != 'TitleScreen':
