@@ -6,6 +6,7 @@ var thinking = false
 
 func _ready() -> void:
 	PlayWorried()
+	thinking = false
 
 func _process(delta: float) -> void:
 	pass
