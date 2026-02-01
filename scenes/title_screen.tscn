@@ -9,11 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="4_u26n3"]
 [ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="5_dc4i4"]
 [ext_resource type="Texture2D" uid="uid://bbusqmxyfn4r7" path="res://art/quitclickedon.png" id="5_mykxm"]
-[ext_resource type="Script" path="res://scenes/start_button.gd" id="6_ib7db"]
-[ext_resource type="Script" path="res://scenes/quit_button.gd" id="8_frs5l"]
+[ext_resource type="Script" uid="uid://bq0ibgbknthnt" path="res://scenes/start_button.gd" id="6_ib7db"]
+[ext_resource type="Script" uid="uid://ceudp3vl6ssyx" path="res://scenes/quit_button.gd" id="8_frs5l"]
 [ext_resource type="Texture2D" uid="uid://bivr2khgssmkh" path="res://art/happymask.png" id="10_ib7db"]
 [ext_resource type="Texture2D" uid="uid://cvurusot6re6r" path="res://art/sadmask.png" id="11_frs5l"]
-[ext_resource type="AudioStream" uid="uid://bk8s1c5re3gve" path="res://Assets/polka_music.wav" id="14_mynnq"]
 
 [node name="TitleScreen" type="Node2D" unique_id=736705505]
 script = ExtResource("1_fgkus")
@@ -120,10 +119,6 @@ position = Vector2(1517, 851.0001)
 rotation = 1.150172
 scale = Vector2(0.5826087, 0.5826087)
 texture = ExtResource("11_frs5l")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1878222547]
-stream = ExtResource("14_mynnq")
-autoplay = true
 
 [connection signal="button_down" from="CanvasLayer/CenterContainer2/HBoxContainer/StartButton" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer2/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
