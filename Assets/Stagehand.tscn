@@ -204,8 +204,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Stagehand" type="AnimatedSprite2D" unique_id=477236684]
+[node name="Stagehand" type="AnimatedSprite2D" unique_id=477236684 groups=["Character"]]
 sprite_frames = SubResource("SpriteFrames_mwoyh")
 animation = &"victory"
-frame_progress = 0.77009076
+frame_progress = 0.06903686
 script = ExtResource("47_syjmx")

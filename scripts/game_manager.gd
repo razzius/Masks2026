@@ -1,5 +1,7 @@
 extends Node
 
+var character : CharacterAnimator
+
 var current_scene = null
 var current_level = 0
 var levels = [
@@ -31,6 +33,9 @@ func complete_level(exit_to_menu: bool) -> void:
 		curtains = current_scene.get_node('Curtains')
 	if (exit_to_menu):
 		current_level = -1
+	
+	if character:
+		character.PlayVictory()
 	curtains.animation_finished.connect(advance_level)
 	curtains.close()
 
@@ -56,6 +61,7 @@ func _deferred_change_scene(path):
 	var masks = get_tree().get_nodes_in_group("Masks")
 	for mask in masks:
 		mask.OnMaskMerged.connect(check_level_complete)
+	character = get_tree().get_nodes_in_group("Character")[0]
 		
 func start_scene() -> void:
 	pass
