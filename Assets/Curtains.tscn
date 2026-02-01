@@ -18,11 +18,28 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_ux56k")
 }, {
-"duration": 1.0,
+"duration": 5.0,
 "texture": ExtResource("4_o12a2")
 }],
 "loop": false,
 "name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_o12a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ux56k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dmk5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_i0a7g")
+}],
+"loop": false,
+"name": &"open",
 "speed": 5.0
 }, {
 "frames": [{
@@ -44,6 +61,6 @@ animations = [{
 
 [node name="Curtains" type="AnimatedSprite2D" unique_id=575676599]
 sprite_frames = SubResource("SpriteFrames_tl8fl")
-animation = &"stay_open"
+animation = &"close"
 centered = false
 script = ExtResource("5_dmk5y")
