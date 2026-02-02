@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://cm5nopscnp7g0"]
+
+[ext_resource type="Script" uid="uid://0ljlbghyicvi" path="res://scripts/title_screen.gd" id="1_s06e1"]
+[ext_resource type="Texture2D" uid="uid://bugj6khui5mdv" path="res://art/theatre.png" id="2_s66xi"]
+[ext_resource type="Texture2D" uid="uid://c51v6va8twxm5" path="res://art/crate.png" id="3_s3ndc"]
+[ext_resource type="Texture2D" uid="uid://cyiysshramhut" path="res://art/gitlogolong.png" id="4_gg5p8"]
+[ext_resource type="Texture2D" uid="uid://bbkil0rvlmiyu" path="res://art/startclickedon.png" id="5_swgfw"]
+[ext_resource type="Script" uid="uid://bq0ibgbknthnt" path="res://scenes/start_button.gd" id="6_qiud8"]
+[ext_resource type="Texture2D" uid="uid://bbusqmxyfn4r7" path="res://art/quitclickedon.png" id="7_iighb"]
+[ext_resource type="Script" uid="uid://ceudp3vl6ssyx" path="res://scenes/quit_button.gd" id="8_ojp3u"]
+[ext_resource type="PackedScene" uid="uid://3a1ubo7q7168" path="res://Assets/Curtains.tscn" id="9_1pv15"]
+[ext_resource type="Texture2D" uid="uid://ccmtugp310psl" path="res://art/banner.png" id="10_1d8q4"]
+[ext_resource type="PackedScene" uid="uid://c0xc3gig67age" path="res://Assets/Stagehand.tscn" id="11_pgnma"]
+[ext_resource type="Texture2D" uid="uid://bivr2khgssmkh" path="res://art/happymask.png" id="12_xj5gr"]
+[ext_resource type="Texture2D" uid="uid://cvurusot6re6r" path="res://art/sadmask.png" id="13_arrrh"]
+
+[node name="TitleScreen" type="Node2D" unique_id=736705505]
+script = ExtResource("1_s06e1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=940166042]
+texture = ExtResource("2_s66xi")
+centered = false
+
+[node name="Crate" type="Sprite2D" parent="." unique_id=2137696053]
+position = Vector2(372, 913)
+scale = Vector2(0.141, 0.141)
+texture = ExtResource("3_s3ndc")
+
+[node name="Crate" type="Sprite2D" parent="Crate" unique_id=524662022]
+position = Vector2(1007.1977, 0.10549927)
+scale = Vector2(0.9926972, 0.9926972)
+texture = ExtResource("3_s3ndc")
+
+[node name="Crate" type="Sprite2D" parent="Crate/Crate" unique_id=1973725692]
+position = Vector2(-493.06818, -1021.7517)
+scale = Vector2(0.9926972, 0.9926972)
+texture = ExtResource("3_s3ndc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1926053750]
+follow_viewport_enabled = true
+
+[node name="CenterContainer1" type="CenterContainer" parent="CanvasLayer" unique_id=221362257]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 233.0
+offset_bottom = 373.0
+grow_horizontal = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/CenterContainer1" unique_id=248441076]
+layout_mode = 2
+theme_override_font_sizes/font_size = 102
+text = "You Win!"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/CenterContainer1" unique_id=1733091570]
+visible = false
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_gg5p8")
+centered = false
+offset = Vector2(300, 0)
+
+[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer" unique_id=308644519]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.5
+offset_top = 160.0
+offset_right = 325.50024
+offset_bottom = 866.0005
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.5, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer2" unique_id=1282107602]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="CanvasLayer/CenterContainer2/HBoxContainer" unique_id=1344575416]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+icon = ExtResource("5_swgfw")
+flat = true
+icon_alignment = 1
+script = ExtResource("6_qiud8")
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/CenterContainer2/HBoxContainer" unique_id=947926400]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+icon = ExtResource("7_iighb")
+flat = true
+script = ExtResource("8_ojp3u")
+
+[node name="Curtains" parent="CanvasLayer" unique_id=575676599 instance=ExtResource("9_1pv15")]
+metadata/_edit_lock_ = true
+
+[node name="Banner" type="Sprite2D" parent="CanvasLayer" unique_id=1464686199]
+position = Vector2(461, 113)
+texture = ExtResource("10_1d8q4")
+
+[node name="Banner" type="Sprite2D" parent="CanvasLayer/Banner" unique_id=787100411]
+position = Vector2(1000, -2)
+texture = ExtResource("10_1d8q4")
+
+[node name="Stagehand" parent="." unique_id=477236684 instance=ExtResource("11_pgnma")]
+position = Vector2(1032, 554)
+scale = Vector2(0.5, 0.5)
+frame_progress = 0.0
+
+[node name="Happymask" type="Sprite2D" parent="." unique_id=867907184]
+position = Vector2(453.99997, 659)
+rotation = -0.8848819
+scale = Vector2(0.5913043, 0.59130436)
+texture = ExtResource("12_xj5gr")
+
+[node name="Sadmask" type="Sprite2D" parent="." unique_id=2088812910]
+position = Vector2(1517, 851.0001)
+rotation = 1.150172
+scale = Vector2(0.5826087, 0.5826087)
+texture = ExtResource("13_arrrh")
+
+[connection signal="button_down" from="CanvasLayer/CenterContainer2/HBoxContainer/StartButton" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer2/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer2/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

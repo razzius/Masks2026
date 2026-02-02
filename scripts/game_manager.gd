@@ -12,6 +12,7 @@ var levels = [
 	'res://scenes/Stages/Stage2-1.tscn',
 	'res://scenes/Stages/StageRazziSilly.tscn',
 	'res://scenes/Stages/Stage4.tscn',
+	'res://scenes/Stages/Stage5.tscn',
 	'res://scenes/Stages/StageCole.tscn'
 ]
 
@@ -24,13 +25,11 @@ func _process(_delta: float) -> void:
 		exit_to_menu()
 		
 func check_level_complete() -> void:
-	print("Checking level started")
 	var masks = get_tree().get_nodes_in_group("Masks")
 	if(masks.all(func(element): return element.deleted)):
 		complete_level(false)
 
 func complete_level(exit_to_menu: bool) -> void:
-	## Todo: Play win animation
 	var curtains
 	if current_level == 0:
 		curtains = current_scene.get_node('CanvasLayer/Curtains')
