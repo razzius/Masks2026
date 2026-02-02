@@ -3,14 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://fjwmfp7itbfr" path="res://Assets/Lever.tscn" id="1_dj8aq"]
 [ext_resource type="Texture2D" uid="uid://8n3xev17g3yo" path="res://art/leveloverlay.png" id="1_ro3t7"]
 [ext_resource type="Script" uid="uid://kqpsmuv3ytdv" path="res://scenes/reset.gd" id="3_5en4g"]
-
-[sub_resource type="Gradient" id="Gradient_ua6yw"]
-offsets = PackedFloat32Array(0.036144577, 0.090361446, 0.14457831, 0.19879518, 0.25301206, 0.2951807, 0.3554217, 0.40963855, 0.46385542, 0.5120482, 0.56626505, 0.6084337, 0.6626506, 0.71686745, 0.7710843, 0.82530123, 0.88554215, 0.939759, 1)
-colors = PackedColorArray(0.84705883, 0.12156863, 0.1254902, 1, 0.7799769, 0.71358216, 0.111575775, 1, 0.84705883, 0.12156863, 0.1254902, 1, 0.7799769, 0.71358216, 0.111575775, 1, 0.84705883, 0.12156863, 0.1254902, 1, 0.7799769, 0.71358216, 0.111575775, 1, 0.84705883, 0.12156863, 0.1254902, 1, 0.7799769, 0.71358216, 0.111575775, 1, 0.84705883, 0.12156863, 0.1254902, 1, 0.7799769, 0.71358216, 0.111575775, 1, 0.84705883, 0.12156863, 0.1254902, 1, 0.7799769, 0.71358216, 0.111575775, 1, 0.84705883, 0.12156863, 0.1254902, 1, 0.7799769, 0.71358216, 0.111575775, 1, 0.84705883, 0.12156863, 0.1254902, 1, 0.7799769, 0.71358216, 0.111575775, 1, 0.84705883, 0.12156863, 0.1254902, 1, 0.7799769, 0.71358216, 0.111575775, 1, 0.82993025, 0.16686058, 0.16725129, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_75u2n"]
-gradient = SubResource("Gradient_ua6yw")
-fill_to = Vector2(1, 1)
+[ext_resource type="Texture2D" uid="uid://c3xcso3ymwdci" path="res://art/reset.png" id="3_ua6yw"]
 
 [node name="UI" type="Control" unique_id=1760316433]
 layout_mode = 3
@@ -38,12 +31,14 @@ position = Vector2(388, 933)
 
 [node name="Button" type="Button" parent="." unique_id=1292282231]
 layout_mode = 0
-offset_left = 454.0
-offset_top = 992.0
-offset_right = 526.0
-offset_bottom = 1064.0
+offset_left = 409.0
+offset_top = 1009.0
+offset_right = 1060.0
+offset_bottom = 1360.0
+scale = Vector2(0.2, 0.2)
 text = "Reset"
-icon = SubResource("GradientTexture2D_75u2n")
+icon = ExtResource("3_ua6yw")
+flat = true
 icon_alignment = 1
 script = ExtResource("3_5en4g")
 
