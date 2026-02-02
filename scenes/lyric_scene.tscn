@@ -130,6 +130,8 @@
 [ext_resource type="Texture2D" uid="uid://bjg4rbvyx8f6t" path="res://art/start.png" id="129_4ijns"]
 [ext_resource type="Texture2D" uid="uid://cyiysshramhut" path="res://art/gitlogolong.png" id="129_c7nvp"]
 [ext_resource type="Texture2D" uid="uid://bbkil0rvlmiyu" path="res://art/startclickedon.png" id="130_ww2ug"]
+[ext_resource type="Texture2D" uid="uid://c67hqq5p5xyqi" path="res://art/spotlighton.png" id="131_58i4k"]
+[ext_resource type="Texture2D" uid="uid://dpab20x8o4oua" path="res://art/spotlightoff.png" id="132_2g6vt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06d2e"]
 animations = [{
@@ -652,3 +654,11 @@ texture = ExtResource("129_4ijns")
 [node name="Startclickedon" type="Sprite2D" parent="." unique_id=1058335364]
 position = Vector2(-838, 691)
 texture = ExtResource("130_ww2ug")
+
+[node name="Spotlighton" type="Sprite2D" parent="." unique_id=1510591669]
+position = Vector2(-1926, 963)
+texture = ExtResource("131_58i4k")
+
+[node name="Spotlightoff" type="Sprite2D" parent="." unique_id=1642279125]
+position = Vector2(-677, 1280)
+texture = ExtResource("132_2g6vt")
